@@ -72,7 +72,7 @@
           <div class="txt-link-home">Ranking</div>
       </a>
 
-      <a id="w-node-4d1d43d3175d-ae858d38" data-w-id="dad73026-bf28-5d69-f293-4d1d43d3175d" href="<?php echo get_site_url() ?>/interna" class="link-home logo w-inline-block w-clearfix" data-ix="hover-home">
+      <a id="w-node-4d1d43d3175d-ae858d38" data-w-id="dad73026-bf28-5d69-f293-4d1d43d3175d" href="<?php echo get_site_url() ?>/menu-page" class="link-home logo w-inline-block w-clearfix" data-ix="hover-home">
           <img src="<?php the_field('imagem_card_logo'); ?>" alt="" class="img-home logo-rai">
       </a>
   </div>
@@ -87,15 +87,10 @@
 
 
   <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
+
                             <!--############### Container Expertise  ###################-->
 
-  <div class="container-modal-expertise">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-expertise">
-    <div class="box-videomodal w-embed w-iframe">
-        <iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/<?php  the_field('link_do_video_expertise');  ?>?enablejsapi=1&version=3&playerapiid=ytplayer"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-        </iframe>
-    </div>
-  </div>
+  <?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
 
                             <!--##################   Container Depoimento  #################################-->
 
