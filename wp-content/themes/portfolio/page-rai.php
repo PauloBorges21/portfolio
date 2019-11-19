@@ -45,18 +45,61 @@ get_header();
 <?php include(TEMPLATEPATH . '/inc/menu-internas.php'); ?>
 
 
+
+<?php
+//clwp_postsbycategory();
+//argumentos do loop de posts da categoria. Esse Filtro Exclusivo para Reel Caso não tenha Deixar o Menu principal para trazer sempre o ultimo vídeo
+$args = array(
+    'numberposts' => 1,
+    'category' => array(40),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true,
+
+    //'offset' => 1
+);
+$my_posts = get_posts($args);
+$post_categories = get_terms($args);
+//inicio do loop de posts
+//var_dump($post_categories);
+if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
+
+    $title = get_the_title($post->ID, '', '', false);
+    $content = get_the_content($post->ID, '', '', false);
+    $cat_nome = get_the_category( $post->ID );
+    //$verificaCategoria = $cat_nome[1]->slug;
+//var_dump($my_posts);
+
+    ?>
+
+
+    <!--Imagem vindo de um custom field dos posts-->
   <div class="main-banner-interna">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-reel-leticias.jpg" srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/img-reel-leticias-p-500.jpeg 500w, <?php echo get_stylesheet_directory_uri(); ?>/images/img-reel-leticias-p-800.jpeg 800w, <?php echo get_stylesheet_directory_uri(); ?>/images/img-reel-leticias-p-1600.jpeg 1600w, <?php echo get_stylesheet_directory_uri(); ?>/images/img-reel-leticias.jpg 1919w" sizes="100vw" alt="" class="img-main-banner">
+      <img src="<?php the_field('fundo_principal') ?>" alt="" class="img-main-banner">
     <div class="content-main-banner">
-      <div class="box-content-main-banner"><img src="images/play-btn.png" alt="" class="btn-play-mainbanner">
-        <h1 class="h1-internna">Rái Advertising - Reel</h1>
-        <p>Conceito estratégico e multiplataforma<br>desenvolvido de forma integrada.<br>A Rái é a única agência a centralizar<br>no planejamento, todas as ferramentas<br>de marketing de todos os clientes.</p>
+
+            <div class="box-content-main-banner">
+          <img src="<?php echo get_stylesheet_directory_uri()?>/images/play-btn.png" alt="" class="btn-play-mainbanner" data-ix="abrir-modal-video-reel-full">
+        <h1 class="h1-internna"><?= $title; ?></h1>
+        <p><?= $content;?>  </p>
       </div>
     </div>
   </div>
+    <div class="modal-video-reel-full">
+        <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
+        <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab" class="w-embed-youtubevideo videofull">
+            <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube');?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="">
 
-
-  <div class="nav-interna w-clearfix">
+            </iframe>
+        </div>
+    </div>
+        <?php endforeach; endif; //fim do loop de posts ?>
+    <div class="nav-interna w-clearfix">
     <ul class="ul-nav-interna w-clearfix w-list-unstyled">
       <li class="li-nav-interna w-clearfix"><a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a></li>
       <li class="li-nav-interna w-clearfix"><a href="#cases-2019" class="link-nav-interna">cases</a></li>
@@ -66,21 +109,35 @@ get_header();
     </ul><a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a></div>
   <div id="midia-eletronica" class="section-sliders">
 
+
+
     <h2 class="h2-interna">Mídia Eletrônica</h2>
-    <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
+
+      <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
       <div class="mask-sllider-interna w-slider-mask">
         <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-diniz.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-diniz.png" alt="" class="logo-slide"></div>
+
+            //Aqui Ficará um Loop com ultimos Posts de cada Categoria 
+
+          <div class="content-slide" data-ix="hover-item-slide">
+              <img src="images/img-prev-diniz.jpg" alt="" class="img-slide-conteudos">
+            <div class="logo-cliente-slide">
+                <img src="images/logo-diniz.png" alt="" class="logo-slide">
+            </div>
+          </div>
+        </div>
+
+        <div class="item-sllider-interna w-slide">
+          <div class="content-slide" data-ix="hover-item-slide">
+              <img src="images/img-prev-warren.jpg" alt="" class="img-slide-conteudos">
+            <div class="logo-cliente-slide">
+                <img src="images/logo-warren.png" alt="" class="logo-slide">
+            </div>
           </div>
         </div>
         <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-warren.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-warren.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-usaflex.jpg" alt="" class="img-slide-conteudos">
+          <div class="content-slide" data-ix="hover-item-slide">
+              <img src="images/img-prev-usaflex.jpg" alt="" class="img-slide-conteudos">
             <div class="logo-cliente-slide"><img src="images/logo-usaflex.png" alt="" class="logo-slide"></div>
           </div>
         </div>
@@ -90,8 +147,10 @@ get_header();
           </div>
         </div>
         <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kiss.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kiss.png" alt="" class="logo-slide"></div>
+          <div class="content-slide" data-ix="hover-item-slide">
+              <img src="images/img-prev-kiss.jpg" alt="" class="img-slide-conteudos">
+            <div class="logo-cliente-slide"><img src="images/logo-kiss.png" alt="" class="logo-slide">
+            </div>
           </div>
         </div>
         <div class="item-sllider-interna w-slide">
@@ -488,70 +547,255 @@ get_header();
   <div class="modal-conteudo-interna">
     <div class="box-content-modal">
       <div class="container-video-modal">
+          <!--
+#################################
+#MODAL POPUP Puxa Imagem Título e Conteúdo
+#################################
+-->
+
+
+<?php
+//clwp_postsbycategory();
+//argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
+$args = array(
+    'numberposts' => 1,
+    'category' => array(15),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true,
+
+    //'offset' => 1
+);
+$my_posts = get_posts($args);
+$post_categories = get_terms($args);
+//inicio do loop de posts
+//var_dump($post_categories);
+if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
+
+    $title = get_the_title($post->ID, '', '', false);
+    $content = get_the_content($post->ID, '', '', false);
+    $cat_nome = get_the_category( $post->ID );
+    //$verificaCategoria = $cat_nome[1]->slug;
+//var_dump($my_posts);
+
+    ?>
+
+
         <div class="box-destq-conteudo" data-ix="abrir-modal-video-full">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/prev-usa-leticias.jpg" srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/prev-usa-leticias-p-800.jpeg 800w, <?php echo get_stylesheet_directory_uri(); ?>/images/prev-usa-leticias.jpg 960w" sizes="(max-width: 767px) 100vw, 700px" alt="" class="img-destq-conteudo">
+            <img src="<?php echo the_field('imagem_modal')?>" alt="" class="img-destq-conteudo">
         </div>
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar.png" alt="" class="btn-fechar-modal-conteudo" data-ix="fechar-modal-conteudo-interna">
       </div>
       <div class="desc-video-modal">
-        <h2 class="h2-conteudo">Rái Advertising - Reel</h2>
-        <div>Lorem Ipsum aenean sollicitudin  lorem quis bibendum auctor<br>ipsum nec sagittis sem nibh id elit duis sed nibh vulputate.</div>
+        <h2 class="h2-conteudo"><?=$title?></h2>
+        <div><?=$content?></div>
       </div>
+
+<?php endforeach; endif;?>
+        <!--
+#################################
+#MODAL POPUP VEJA RELACIONADO A CATEGORIA RAI
+#################################
+-->
       <div class="container-videos-relacionados">
         <h3 class="h3-conteudo">Veja também</h3>
         <ul class="ul-veja-tambem w-clearfix w-list-unstyled">
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem" data-ix="abrir-modal-video-full"><img src="images/prev-veja-tambem-01.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem" data-ix="abrir-modal-slide-full-2"><img src="images/prev-veja-tambem-02.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-03.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-04.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-05.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-06.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-07.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-08.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
-          <li class="li-veja-tambem">
-            <div class="box-img-vejatambem"><img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem"></div>
-          </li>
+
+<?php
+//clwp_postsbycategory();
+//argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
+$args = array(
+    'numberposts' => 15,
+    'category' => array(15),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true,
+
+    //'offset' => 1
+);
+$my_query= new Wp_Query($args);
+
+if($my_query->have_posts()) :
+    while ( $my_query-> have_posts()) : $my_query->the_post();
+
+//echo var_dump($my_query);
+        ?>
+
+<!--    $title = get_the_title($post->ID, '', '', false);-->
+<!--    $content = get_the_content($post->ID, '', '', false);-->
+<!--    $cat_nome = get_the_category( $post->ID );-->
+<!--    $verificaCategoria = $cat_nome[1]->slug;-->
+<!--    var_dump($my_posts);-->
+<!---->
+<!--    ?>-->
+
+
+
+
+            <li class="li-veja-tambem">
+            <div class="box-img-vejatambem" data-ix="abrir-modal-video-full">
+                <img src="<?php echo the_field('imagem_modal');?>" alt="" class="img-prev-veja-tambem">
+            </div>
+            </li>
+
+
+
+        <div class="modal-video-full">
+            <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full">
+            <div style="padding-top:56.17021276595745%" id="w-node-3618fab8c506-adef43ab" class="w-embed-youtubevideo videofull">
+                <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube')?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="">
+
+                </iframe>
+            </div>
+        </div>
+
+    <?php endwhile; ; endif; //fim do loop de posts ?>
+
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem" data-ix="abrir-modal-slide-full-2">-->
+<!--                <img src="images/prev-veja-tambem-02.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-03.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-04.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-05.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-06.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-07.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!---->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-08.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="li-veja-tambem">-->
+<!--            <div class="box-img-vejatambem">-->
+<!--                <img src="images/prev-veja-tambem-09.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--            </div>-->
+<!--          </li>-->
         </ul>
       </div>
     </div>
   </div>
-  <div class="modal-video-full"><img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full">
-    <div style="padding-top:56.17021276595745%" id="w-node-3618fab8c506-adef43ab" class="w-embed-youtubevideo videofull"><iframe src="https://www.youtube.com/embed/Y8d-blNf1ZU?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+<!--
+#################################
+#MODAL POPUP
+#################################
+-->
+
+<?php
+//clwp_postsbycategory();
+//argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
+$args = array(
+    'numberposts' => 1,
+    'category' => array(15),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true,
+
+    //'offset' => 1
+);
+$my_posts = get_posts($args);
+$post_categories = get_terms($args);
+//inicio do loop de posts
+//var_dump($post_categories);
+if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
+
+    $title = get_the_title($post->ID, '', '', false);
+    $content = get_the_content($post->ID, '', '', false);
+    $cat_nome = get_the_category( $post->ID );
+    //$verificaCategoria = $cat_nome[1]->slug;
+//var_dump($my_posts);
+
+    ?>
+
+
+  <div class="modal-video-full">
+      <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full">
+    <div style="padding-top:56.17021276595745%" id="w-node-3618fab8c506-adef43ab" class="w-embed-youtubevideo videofull">
+        <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube')?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="">
+
+        </iframe>
+    </div>
   </div>
+<?php endforeach; endif;?>
+<!--
+#################################
+#MODAL POPUP Final
+#################################
+ -->
+
+
   <div class="modal-slide-full"><img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-slide-full-2">
     <div data-animation="slide" data-duration="500" data-infinite="1" class="slider-full w-slider">
       <div class="mask-slider-full w-slider-mask">

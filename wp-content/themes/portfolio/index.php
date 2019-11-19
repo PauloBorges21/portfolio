@@ -298,8 +298,13 @@
   <div class="container-modal-depoimentos"><img src="images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-depoimentos">
     <div class="box-videomodal w-embed w-iframe"><iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/ZtypHir-ceg?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
   </div>
-  <div class="container-modal-apresentacao"><img src="images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-apresentacao">
-    <div class="box-videomodal w-embed w-iframe"><iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/k6ylktIR9oc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+  <div class="container-modal-apresentacao">
+      <img src="images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-apresentacao">
+    <div class="box-videomodal w-embed w-iframe">
+        <iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/k6ylktIR9oc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+
+        </iframe>
+    </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/portfolio-rai-2019.js" type="text/javascript"></script>

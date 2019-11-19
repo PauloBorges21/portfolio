@@ -19,4 +19,16 @@
     <a href="http://javascript:history.go(-1)" class="w-inline-block">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-nav.png" alt="">
     </a>
+
+
+
+    <?php
+    //if(!is_page('70') ){ ?>
+<!--        <a href="http://javascript:history.go(-1)" class="w-inline-block">-->
+<!--        <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/icon-nav.png" alt="">-->
+<!--    </a>-->
+
+    <?php// } ?>
+
+
 </div>
