@@ -35,6 +35,8 @@
 </head>
 <body>
 
+
+
   <div class="w-layout-grid grid-home">
 
       <a id="w-node-46682964642c-ae858d38" data-w-id="d82193e6-f8cd-4a71-8926-46682964642c" href="#" class="link-home w-inline-block w-clearfix" data-ix="hover-home">
@@ -79,12 +81,13 @@
 
 
 
-  <!--  ############ Section Prêmios ################### -->
+                                <!--  ############ Section Prêmios ################### -->
   <?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
 
-<!--  ############ Section Ranking ################### -->
+                                <!--  ############ Section Ranking ################### -->
   <?php include(TEMPLATEPATH . '/inc/ranking.php'); ?>
 
+                                <!--  ############ Section Equipe ################### -->
 
   <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
 
@@ -101,7 +104,13 @@
          </iframe>
     </div>
   </div>
+
+  <!--##################   FINAL Container Depoimento  #################################-->
+
+
+
   <!--##################   Container Apresentação  #################################-->
+
   <div class="container-modal-apresentacao">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-apresentacao">
     <div class="box-videomodal w-embed w-iframe">
@@ -109,4 +118,6 @@
         </iframe>
     </div>
   </div>
+
+  <!--##################  FINAL Container Apresentação  #################################-->
 <?php get_footer() ;?>

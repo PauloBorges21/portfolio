@@ -47,7 +47,6 @@ get_header();
 
 
 <?php
-//clwp_postsbycategory();
 //argumentos do loop de posts da categoria. Esse Filtro Exclusivo para Reel Caso não tenha Deixar o Menu principal para trazer sempre o ultimo vídeo
 $args = array(
     'numberposts' => 1,
@@ -90,6 +89,7 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       </div>
     </div>
   </div>
+
     <div class="modal-video-reel-full">
         <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
         <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab" class="w-embed-youtubevideo videofull">
@@ -99,6 +99,7 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
         </div>
     </div>
         <?php endforeach; endif; //fim do loop de posts ?>
+
     <div class="nav-interna w-clearfix">
     <ul class="ul-nav-interna w-clearfix w-list-unstyled">
       <li class="li-nav-interna w-clearfix"><a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a></li>
@@ -106,99 +107,206 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       <li class="li-nav-interna w-clearfix"><a href="#" class="link-nav-interna">Mídia Impressa</a></li>
       <li class="li-nav-interna w-clearfix"><a href="#digital" class="link-nav-interna">Digital</a></li>
       <li class="li-nav-interna w-clearfix"><a href="#" class="link-nav-interna">Design &amp; VM</a></li>
-    </ul><a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a></div>
-  <div id="midia-eletronica" class="section-sliders">
+    </ul>
+        <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
+    </div>
 
 
-
+    <div id="midia-eletronica" class="section-sliders">
     <h2 class="h2-interna">Mídia Eletrônica</h2>
 
       <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
       <div class="mask-sllider-interna w-slider-mask">
+
+
+   <?php
+$args = array(
+    //'numberposts' => 15,
+    'category_parent' => array(16),
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true,
+
+    //'offset' => 1
+);
+$my_query= new Wp_Query($args);
+
+if($my_query->have_posts()) :
+    while ( $my_query-> have_posts()) : $my_query->the_post();
+
+
+   if( have_rows('apresentaCards',102)){ //Se existir banner
+
+    while ( have_rows('apresentaCards',102) ) { the_row(); //Percorre Todos os banners
+
+        $exibe = get_sub_field('midia_eletronica');
+
+
+        if ($exibe == "Sim"){	// Se selecionado para exibir
+
+                ?>
+
+
+
         <div class="item-sllider-interna w-slide">
-
-            //Aqui Ficará um Loop com ultimos Posts de cada Categoria 
-
           <div class="content-slide" data-ix="hover-item-slide">
-              <img src="images/img-prev-diniz.jpg" alt="" class="img-slide-conteudos">
+
+              <img src="<?php echo the_field('thumb_card_video')?>" alt="" class="img-slide-conteudos">
+
             <div class="logo-cliente-slide">
-                <img src="images/logo-diniz.png" alt="" class="logo-slide">
+                <img src="<?php echo the_sub_field('logo',102);?>" alt="" class="logo-slide">
             </div>
           </div>
         </div>
 
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide">
-              <img src="images/img-prev-warren.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide">
-                <img src="images/logo-warren.png" alt="" class="logo-slide">
-            </div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide">
-              <img src="images/img-prev-usaflex.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-usaflex.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-adidas.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-adidas.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide">
-              <img src="images/img-prev-kiss.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kiss.png" alt="" class="logo-slide">
-            </div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-ricardo.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-ricardo.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
-        <div class="item-sllider-interna w-slide">
-          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-          </div>
-        </div>
+
+           <?php //var_dump($cat_nome);?>
+
+
+            <?php
+
+        } //Fim Se selecionado para exibir
+        else{
+            ?>
+
+            <br/><br/>
+            <?php
+        } //Fim else
+    }
+
+}
+
+else {
+
+    // Se não tiver banners
+
+}
+    endwhile; endif; //fim do loop de posts
+?>
+<!---->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/img-prev-warren.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="--><?php //the_sub_field('logo');?><!--" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-usaflex.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-usaflex.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-adidas.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-adidas.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kiss.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kiss.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-ricardo.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-ricardo.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="item-sllider-interna w-slide">-->
+<!--          <div class="content-slide" data-ix="hover-item-slide">-->
+<!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
+<!--            <div class="logo-cliente-slide">-->
+<!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
+
       <div class="arrow-sllider-interna left w-slider-arrow-left">
         <div class="w-icon-slider-left"></div>
       </div>
@@ -208,13 +316,16 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       <div class="nav-sllider-interna w-slider-nav w-round"></div>
     </div>
   </div>
+
+
   <div id="digital" class="section-sliders">
     <h2 class="h2-interna">digital</h2>
     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
       <div class="mask-sllider-interna w-slider-mask">
         <div class="item-sllider-interna w-slide">
           <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-continental.jpg" alt="" class="img-slide-conteudos">
-            <div class="logo-cliente-slide"><img src="images/logo-continental.png" alt="" class="logo-slide"></div>
+            <div class="logo-cliente-slide">
+                <img src="images/logo-continental.png" alt="" class="logo-slide"></div>
           </div>
         </div>
         <div class="item-sllider-interna w-slide">
@@ -292,6 +403,7 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       <div class="nav-sllider-interna w-slider-nav w-round"></div>
     </div>
   </div>
+
   <div id="cases-2019" class="section-sliders">
     <h2 class="h2-interna">cases 2019</h2>
     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
@@ -544,6 +656,7 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       <div class="nav-sllider-interna w-slider-nav w-round"></div>
     </div>
   </div>
+
   <div class="modal-conteudo-interna">
     <div class="box-content-modal">
       <div class="container-video-modal">
@@ -607,7 +720,7 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
         <ul class="ul-veja-tambem w-clearfix w-list-unstyled">
 
 <?php
-//clwp_postsbycategory();
+
 //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
 $args = array(
     'numberposts' => 15,
@@ -650,7 +763,7 @@ if($my_query->have_posts()) :
 
 
 
-        <div class="modal-video-full">
+        <div class="modal-video-full" id="<?php echo the_field('dd')?>">
             <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full">
             <div style="padding-top:56.17021276595745%" id="w-node-3618fab8c506-adef43ab" class="w-embed-youtubevideo videofull">
                 <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube')?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="">
@@ -742,11 +855,26 @@ if($my_query->have_posts()) :
       </div>
     </div>
   </div>
-<!--
-#################################
-#MODAL POPUP
-#################################
--->
+
+
+
+    <div class="modal-video-full"><img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full">
+        <div style="padding-top:56.17021276595745%" id="w-node-3618fab8c506-adef43ab" class="w-embed-youtubevideo videofull"><iframe src="https://www.youtube.com/embed/Y8d-blNf1ZU?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+    </div>
+
+    <div class="modal-video-reel-full">
+        <img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
+        <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab" class="w-embed-youtubevideo videofull">
+            <iframe src="https://www.youtube.com/embed/Sl_d5DhlY98?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+    </div>
+
+
+
+    <!--
+    #################################
+    #MODAL POPUP
+    #################################
+    -->
 
 <?php
 //clwp_postsbycategory();
@@ -896,4 +1024,8 @@ if ($my_posts ) : foreach ($my_posts as $post) : setup_postdata($post) ;
       </ul>
     </div>
   </div>
+
+
+
+
 <?php get_footer();?>

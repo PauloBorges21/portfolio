@@ -50,6 +50,7 @@
     </li>
 
 <?php endwhile; else : endif; ?>
+
     <li class="li-menu" data-ix="abrir-modal-equipe">
         <a href="#" class="link-menu w-inline-block" data-ix="hover-menu">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-menu-equipe.png" alt="">
