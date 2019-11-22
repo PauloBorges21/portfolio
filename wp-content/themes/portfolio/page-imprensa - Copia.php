@@ -93,35 +93,43 @@ get_header();
                         <div class="itens-modal">
                             <?php if (have_rows('adicionar_imagens_imprensa')): while (have_rows('adicionar_imagens_imprensa')) : the_row(); ?>
 
-                            <input type="hidden" class="img-modal" value="<?php the_sub_field('imagem_slider') ?>">
+                            <input type="hidden" value="<?php the_sub_field('imagem_slider') ?>">
                             <?php endwhile; else : endif; ?>
 
                         </div>
+
+                        <div class="container-modal-imprensa" id="modal-<?php the_sub_field('data') ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar-modal.png"
+                                 id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-imprensa">
+                            <div class="box-modal imprensa">
+                                <div data-animation="slide" data-hide-arrows="1" data-duration="500" data-infinite="1"
+                                     class="slider-imprensa w-slider">
+                                    <div class="mask-imprensa w-slider-mask">
+
+                                        <?php if (have_rows('adicionar_imagens_imprensa')): while (have_rows('adicionar_imagens_imprensa')) : the_row(); ?>
+
+                                            <div class="slide-imprensa w-slide">
+                                                <img src="<?php the_sub_field('imagem_slider') ?>" class="img-imprensa">
+                                            </div>
+                                        <?php endwhile; else : endif; ?>
+
+                                    </div>
+                                    <div class="arrow-imprensa w-slider-arrow-left">
+                                        <div class="w-icon-slider-left"></div>
+                                    </div>
+                                    <div class="arrow-imprensa w-slider-arrow-right">
+                                        <div class="w-icon-slider-right"></div>
+                                    </div>
+                                    <div class="nav-imprensa w-slider-nav w-round" style="display: block"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
                 <?php endwhile; else : endif; ?>
 
             </ul>
-
-            <div class="container-modal-imprensa" id="modal-<?php the_sub_field('data') ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar-modal.png"
-                     id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-imprensa">
-                <div class="box-modal imprensa">
-                    <div data-animation="slide" data-hide-arrows="1" data-duration="500" data-infinite="1"
-                         class="slider-imprensa w-slider">
-                        <div class="mask-imprensa w-slider-mask">
-<!--                            <div class="slide-imprensa w-slide">-->
-<!--                              <img src="" class="img-imprensa">-->
-<!--                            </div>-->
-                        </div>
-                        <div class="arrow-imprensa w-slider-arrow-left">
-                            <div class="w-icon-slider-left"></div>
-                        </div>
-                        <div class="arrow-imprensa w-slider-arrow-right">
-                            <div class="w-icon-slider-right"></div>
-                        </div>
-                        <div class="nav-imprensa w-slider-nav w-round" style="display: block"></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <div class="section-footer">
@@ -138,34 +146,35 @@ get_header();
 
 <script>
     $( document ).ready(function() {
-        // $('.btn-news').click(function(obj) {
-        //     debugger;
+        $('.btn-news').click(function(obj) {
+            debugger;
 
-            // var nameData = obj.target.dataset.teste;
-            // var modal = document.getElementById(nameData);
+            var nameData = obj.target.dataset.teste;
+            var modal = document.getElementById(nameData);
+            // modal.style.transformStyle = "preserve-3d";
+            // modal.style.display = "block";
+            // modal.style.opacity = "1";
+            // modal.style.transform = "scaleX(1) scaleY(1) scaleZ(1)";
+            // modal.style.transition = "transform 600ms ease 0s, opacity 350ms ease 0s";
+            //
+            // var parObj = obj.target.parentElement;
+            // var setaLeft = parObj.querySelector(".slider-arrow-left");
+            // setaLeft.classList.remove("slider-arrow-left");
+            // setaLeft.classList.add("w-slider-arrow-left");
+            //
+            // var setaRight = parObj.querySelector(".slider-arrow-right");
+            // setaRight.classList.remove("slider-arrow-right");
+            // setaRight.classList.add("w-slider-arrow-right");
 
-            var modalImg = document.querySelector(".mask-imprensa");
-
-            var div1 = document.createElement('div');
-            div1.classList.add("slide-imprensa");
-            div1.classList.add("w-slide");
-            var div2 = document.createElement('div');
-            div2.classList.add("slide-imprensa");
-            div2.classList.add("w-slide");
-
-            var img1 = document.createElement('img');
-            img1.src = "http://localhost/portfolio/wp-content/uploads/2019/11/news-1.jpg";
-            img1.classList.add("img-imprensa");
-
-            var img2 = document.createElement('img');
-            img2.src = "http://localhost/portfolio/wp-content/uploads/2019/11/news-2.jpg";
-            img2.classList.add("img-imprensa");
-
-            modalImg.appendChild(div1);
-            modalImg.appendChild(div2);
-
-            div1.appendChild(img1);
-            div2.appendChild(img2);
-        // });
+            var teste = document.getElementsByClassName("container-modal-imprensa");
+            for(var i = 0; i < teste.length; i++){
+                var testeId = teste[i].id;
+                if(testeId != nameData){
+                    modal.style.display = "none";
+                } else{
+                    modal.style.display = "block";
+                }
+            }
+        });
     });
 </script>

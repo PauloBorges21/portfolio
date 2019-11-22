@@ -12,23 +12,24 @@
         <li class="li-navmenu">
             <a href="#" class="link-navmenu" data-ix="abrir-modal-expertise">Expertise</a>
         </li>
+
         <li class="li-navmenu">
             <a href="<?php echo get_site_url() ?>/imprensa" class="link-navmenu">Imprensa</a>
         </li>
+
     </ul>
     <a href="http://javascript:history.go(-1)" class="w-inline-block">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-nav.png" alt="">
     </a>
 
 
-
     <?php
     //if(!is_page('70') ){ ?>
-<!--        <a href="http://javascript:history.go(-1)" class="w-inline-block">-->
-<!--        <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/icon-nav.png" alt="">-->
-<!--    </a>-->
+    <!--        <a href="http://javascript:history.go(-1)" class="w-inline-block">-->
+    <!--        <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/icon-nav.png" alt="">-->
+    <!--    </a>-->
 
-    <?php// } ?>
+    <?php // } ?>
 
 
 </div>

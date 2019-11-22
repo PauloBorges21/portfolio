@@ -889,13 +889,13 @@ body {
   transform: scale(0);
 }
 
-.banner-imprensa {
-  height: 350px;
-  background-image: url('../images/mosaico-05.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+/*.banner-imprensa {*/
+/*  height: 350px;*/
+/*  background-image: url('../images/mosaico-05.jpg');*/
+/*  background-position: 50% 50%;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*}*/
 
 .container-banner-imprensa {
   display: -webkit-box;
