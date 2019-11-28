@@ -9,6 +9,8 @@
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/components.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/portfolio-rai-2019.css" rel="stylesheet"
           type="text/css">
+
+
     <style>@media (min-width: 992px) {
             html.w-mod-js:not(.w-mod-ix) [data-w-id="9bd6345c-39a1-cec9-cb1b-70f32b3eaea5"] {
                 -webkit-transform: translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);

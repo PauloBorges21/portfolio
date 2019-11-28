@@ -48,6 +48,37 @@ get_header();
             display: none;
         / / Safari and Chrome
         }
+
+        /* Next & previous buttons */
+        .prev-WW, .next-WW {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .prev-WW {
+            left: -50px;
+            border-radius: 0 3px 3px 0;
+        }
+        .next-WW {
+            right: -50px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev-WW:hover, .next-WW:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
     </style>
     </head>
     <body>
@@ -82,43 +113,49 @@ get_header();
             <a href="<?php echo get_site_url() ?>/menu-page" class="link-voltar">Voltar</a>
             <ul class="ul-imprensa w-clearfix w-list-unstyled">
 
-                <?php if (have_rows('adicionar_slider')): while (have_rows('adicionar_slider')) : the_row(); ?>
+                <?php if (have_rows('adicionar_slider')): while (have_rows('adicionar_slider')) : the_row();
+
+                    $dataPost = get_sub_field('data');
+                    $tituloNews = get_sub_field('titulo_news');
+                    $idClass = explode(' ', $tituloNews);
+                     $idClass[0];
+                    ?>
+
+
 
                     <li class="li-imprensa">
-                        <div class="data-news"><?php the_sub_field('data') ?></div>
-                        <h2 class="titu-news"><?php the_sub_field('titulo_news') ?></h2>
-<!--                        <a href="#" class="btn-news w-button" data-ix="abrir-modal-imprensa"</a>-->
-                        <a href="#" class="btn-news w-button" data-ix="abrir-modal-imprensa" data-teste="modal-<?php the_sub_field('data') ?>">Leia mais</a>
+                        <div class="data-news"><?php echo $dataPost; ?></div>
+                        <h2 class="titu-news"><?php echo $tituloNews; ?></h2>
+                        <!--                        <a href="#" class="btn-news w-button" data-ix="abrir-modal-imprensa"</a>-->
+                        <!--                        <a href="#" class="btn-news w-button" data-ix="abrir-modal-imprensa" data-teste="modal---><?php //the_sub_field('data') ?><!--">Leia mais</a>-->
+                        <button onclick="abrirModal(this);" data-SpiderMan="modal-<?php echo $dataPost . $idClass[0]; ?>" class="btn-news w-button">Leia Mais</button>
 
-                        <div class="itens-modal">
-                            <?php if (have_rows('adicionar_imagens_imprensa')): while (have_rows('adicionar_imagens_imprensa')) : the_row(); ?>
+                        <form action="/" class="f-imagens" name="formImagens" data-form="modal-<?php echo $dataPost . $idClass[0] ?>">
 
-                            <input type="hidden" class="img-modal" value="<?php the_sub_field('imagem_slider') ?>">
+                            <?php if (have_rows('adicionar_imagens_imprensa')): while (have_rows('adicionar_imagens_imprensa')) : the_row();
+                                $imagemSlider = get_sub_field('imagem_slider');
+
+                                ?>
+                                <input type="hidden" value="<?php echo $imagemSlider; ?>">
                             <?php endwhile; else : endif; ?>
-
-                        </div>
+                        </form>
+                    </li>
                 <?php endwhile; else : endif; ?>
 
             </ul>
-
-            <div class="container-modal-imprensa" id="modal-<?php the_sub_field('data') ?>">
+            <div class="container-modal-imprensa" id="modal-teste">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar-modal.png"
-                     id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-imprensa">
+                     id="fecha-modal" alt="" class="btn-fechar-modal" onclick="removeFechar()">
                 <div class="box-modal imprensa">
                     <div data-animation="slide" data-hide-arrows="1" data-duration="500" data-infinite="1"
                          class="slider-imprensa w-slider">
                         <div class="mask-imprensa w-slider-mask">
-<!--                            <div class="slide-imprensa w-slide">-->
-<!--                              <img src="" class="img-imprensa">-->
-<!--                            </div>-->
+
+
+
                         </div>
-                        <div class="arrow-imprensa w-slider-arrow-left">
-                            <div class="w-icon-slider-left"></div>
-                        </div>
-                        <div class="arrow-imprensa w-slider-arrow-right">
-                            <div class="w-icon-slider-right"></div>
-                        </div>
-                        <div class="nav-imprensa w-slider-nav w-round" style="display: block"></div>
+                        <a class="prev-WW" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next-WW" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                 </div>
             </div>
@@ -137,35 +174,5 @@ get_header();
 <?php get_footer(); ?>
 
 <script>
-    $( document ).ready(function() {
-        // $('.btn-news').click(function(obj) {
-        //     debugger;
 
-            // var nameData = obj.target.dataset.teste;
-            // var modal = document.getElementById(nameData);
-
-            var modalImg = document.querySelector(".mask-imprensa");
-
-            var div1 = document.createElement('div');
-            div1.classList.add("slide-imprensa");
-            div1.classList.add("w-slide");
-            var div2 = document.createElement('div');
-            div2.classList.add("slide-imprensa");
-            div2.classList.add("w-slide");
-
-            var img1 = document.createElement('img');
-            img1.src = "http://localhost/portfolio/wp-content/uploads/2019/11/news-1.jpg";
-            img1.classList.add("img-imprensa");
-
-            var img2 = document.createElement('img');
-            img2.src = "http://localhost/portfolio/wp-content/uploads/2019/11/news-2.jpg";
-            img2.classList.add("img-imprensa");
-
-            modalImg.appendChild(div1);
-            modalImg.appendChild(div2);
-
-            div1.appendChild(img1);
-            div2.appendChild(img2);
-        // });
-    });
 </script>

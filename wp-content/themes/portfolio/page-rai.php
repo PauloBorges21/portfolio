@@ -59,212 +59,53 @@ get_header();
 
 <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
 
-<?php include(TEMPLATEPATH . '/inc/menu-internas.php'); ?>
+<?php include(TEMPLATEPATH . '/includes/reel.php'); ?>
 
 
-<?php
-//argumentos do loop de posts da categoria. Esse Filtro Exclusivo para Reel Caso não tenha Deixar o Menu principal para trazer sempre o ultimo vídeo
-$args = array(
-    'numberposts' => 1,
-    'category' => array(40),
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'include' => array(),
-    'exclude' => array(),
-    'meta_key' => '',
-    'meta_value' => '',
-    'post_type' => 'post',
-    'suppress_filters' => true,
 
-    //'offset' => 1
-);
-$my_posts = get_posts($args);
-$post_categories = get_terms($args);
-//inicio do loop de posts
-//var_dump($post_categories);
-if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
-
-    $title = get_the_title($post->ID, '', '', false);
-    $content = get_the_content($post->ID, '', '', false);
-    $cat_nome = get_the_category($post->ID);
-    //$verificaCategoria = $cat_nome[1]->slug;
-//var_dump($my_posts);
-
-    ?>
-
-
-    <!--Imagem vindo de um custom field dos posts-->
-    <div class="main-banner-interna">
-        <img src="<?php the_field('fundo_principal') ?>" alt="" class="img-main-banner">
-        <div class="content-main-banner">
-
-            <div class="box-content-main-banner">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/play-btn.png" alt=""
-                     class="btn-play-mainbanner" data-ix="abrir-modal-video-reel-full">
-                <h1 class="h1-internna"><?= $title; ?></h1>
-                <p><?= $content; ?>  </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-video-reel-full">
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/btn-fechar.png" alt=""
-             class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
-        <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab"
-             class="w-embed-youtubevideo videofull">
-            <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube'); ?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0"
-                    frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
-                    allow="autoplay; encrypted-media" allowfullscreen="">
-
-            </iframe>
-        </div>
-    </div>
-<?php endforeach; endif; //fim do loop de posts ?>
 
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
-            <li class="li-nav-interna w-clearfix"><a href="#midia-eletronica" class="link-nav-interna">Mídia
-                    Eletrônica</a></li>
-            <li class="li-nav-interna w-clearfix"><a href="#cases-2019" class="link-nav-interna">cases</a></li>
-            <li class="li-nav-interna w-clearfix"><a href="#" class="link-nav-interna">Mídia Impressa</a></li>
-            <li class="li-nav-interna w-clearfix"><a href="#digital" class="link-nav-interna">Digital</a></li>
-            <li class="li-nav-interna w-clearfix"><a href="#" class="link-nav-interna">Design &amp; VM</a></li>
+            <li class="li-nav-interna w-clearfix">
+                <a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a>
+            </li>
+
+            <li class="li-nav-interna w-clearfix">
+                <a href="#cases-2019" class="link-nav-interna">cases</a>
+            </li>
+
+            <li class="li-nav-interna w-clearfix">
+                <a href="#" class="link-nav-interna">Mídia Impressa</a>
+            </li>
+
+            <li class="li-nav-interna w-clearfix">
+                <a href="#digital" class="link-nav-interna">Digital</a>
+            </li>
+
+            <li class="li-nav-interna w-clearfix">
+                <a href="#" class="link-nav-interna">Design &amp; VM</a>
+            </li>
         </ul>
         <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
     </div>
 
+    <?php /**
+ * * Clientes são inseridos manualmente*
+  *  no include abaixo
+  */?>
 
-    <div id="midia-eletronica" class="section-sliders">
-        <h2 class="h2-interna">Mídia Eletrônica</h2>
+    <?php include(TEMPLATEPATH . '/includes/midia-eletronica.php'); ?>
 
-        <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-            <div class="mask-sllider-interna w-slider-mask">
+    <?php /**
+ * * Clientes são inseridos manualmente*
+ *  no include abaixo
+ */?>
 
-                <?php /**
-                 * * Por necessidades(falta de tempo) deixamos manualmente a inserção de novos clientes nos Moldais *
-                 * Não esquecer *
-                 * Colocar tag nos post com o nome dos clientes
-                 * patronizar a escrita das imagens dos logos para funcionar o logo
-                 *
-                 */
-
-                ?>
+    <?php include(TEMPLATEPATH . '/includes/digital.php'); ?>
 
 
-                <!--
-                                            ##############          ###################
-                                            #############   SAMSUNG ###################
-                                            ##############          ###################
-                -->
-
-                <?php
-                $args = array(
-                    'numberposts' => 1,
-                    //'posts_per_page' => 1,
-                    'category' => array(16),
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'include' => array(),
-                    'exclude' => array(),
-                    'tag' => 'samsung',
-                    'meta_key' => '',
-                    'meta_value' => '',
-                    'post_type' => 'post',
-                    'suppress_filters' => true,
-
-                    //'offset' => 1
-                );
-
-                $my_query = new Wp_Query($args);
-
-                $my_posts = get_posts($args);
-                $post_categories = get_terms($args);
 
 
-                //inicio do loop de posts
-                //var_dump($post_categories);
-                if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
-
-                    $tags = wp_get_post_tags($post->ID);
-
-                    ?>
-
-
-                    <div class="item-sllider-interna w-slide">
-                        <div class="content-slide" data-ix="hover-item-slide">
-
-                            <img src="<?php echo the_field('thumb_card_video') ?>" alt="" class="img-slide-conteudos">
-
-                            <div class="logo-cliente-slide">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-<?php echo $tags[0]->name ?>.png"
-                                     alt="" class="logo-slide">
-                            </div>
-                        </div>
-                    </div>
-
-
-                <?php
-
-                endforeach; endif; //fim do loop de posts
-                ?>
-
-
-                <!--
-                                  ##############          ###################
-                                  #############   Diniz   ###################
-                                  ##############          ###################
-      -->
-
-                <?php
-                $args = array(
-                    'numberposts' => 1,
-                    //'posts_per_page' => 1,
-                    'category' => array(16),
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'include' => array(),
-                    'exclude' => array(),
-                    'tag' => 'diniz',
-                    'meta_key' => '',
-                    'meta_value' => '',
-                    'post_type' => 'post',
-                    'suppress_filters' => true,
-
-                    //'offset' => 1
-                );
-
-                $my_query = new Wp_Query($args);
-
-                $my_posts = get_posts($args);
-                $post_categories = get_terms($args);
-
-
-                //inicio do loop de posts
-                //var_dump($post_categories);
-                if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
-
-                    $tags = wp_get_post_tags($post->ID);
-
-                    ?>
-
-
-                    <div class="item-sllider-interna w-slide">
-                        <div class="content-slide" data-ix="hover-item-slide">
-
-                            <img src="<?php echo the_field('thumb_card_video') ?>" alt="" class="img-slide-conteudos">
-
-                            <div class="logo-cliente-slide">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-<?php echo $tags[0]->name ?>.png"
-                                     alt="" class="logo-slide">
-                            </div>
-                        </div>
-                    </div>
-
-
-                <?php
-
-                endforeach; endif; //fim do loop de posts
-                ?>
 
 
                 <!--        <div class="item-sllider-interna w-slide">-->
@@ -364,122 +205,7 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
                 <!--            </div>-->
                 <!--          </div>-->
                 <!--        </div>-->
-            </div>
 
-            <div class="arrow-sllider-interna left w-slider-arrow-left">
-                <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="arrow-sllider-interna right w-slider-arrow-right">
-                <div class="w-icon-slider-right"></div>
-            </div>
-            <div class="nav-sllider-interna w-slider-nav w-round"></div>
-        </div>
-    </div>
-
-
-    <div id="digital" class="section-sliders">
-        <h2 class="h2-interna">digital</h2>
-        <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-            <div class="mask-sllider-interna w-slider-mask">
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-continental.jpg"
-                                                                               alt="" class="img-slide-conteudos">
-                        <div class="logo-cliente-slide">
-                            <img src="images/logo-continental.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-abbot.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-abbot.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-liberty.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-liberty.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-starbucks.jpg"
-                                                                               alt="" class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-starbucks.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-ci.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ci.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-sika.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-sika.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-mahogany.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-mahogany.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow-sllider-interna left w-slider-arrow-left">
-                <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="arrow-sllider-interna right w-slider-arrow-right">
-                <div class="w-icon-slider-right"></div>
-            </div>
-            <div class="nav-sllider-interna w-slider-nav w-round"></div>
-        </div>
-    </div>
 
     <div id="cases-2019" class="section-sliders">
         <h2 class="h2-interna">cases 2019</h2>
@@ -847,7 +573,7 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             </div>
             <div class="desc-video-modal">
                 <h2 class="h2-conteudo"><?= $title ?></h2>
-                <div><?= $content ?></div>
+                <div><?= $content ?> hhh</div>
             </div>
 
             <?php endforeach;
@@ -1012,15 +738,6 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
         </div>
     </div>
 
-    <div class="modal-video-reel-full">
-        <img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
-        <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab"
-             class="w-embed-youtubevideo videofull">
-            <iframe src="https://www.youtube.com/embed/Sl_d5DhlY98?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0"
-                    frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
-                    allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-        </div>
-    </div>
 
 
     <!--
