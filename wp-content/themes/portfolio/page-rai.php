@@ -53,13 +53,17 @@ get_header();
 
 
     <body class="body-interna">
-<?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
 
-<?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
+                    <?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
 
-<?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
+                    <?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
 
-<?php include(TEMPLATEPATH . '/includes/reel.php'); ?>
+                    <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
+
+                    <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
+
+                    <?php include(TEMPLATEPATH . '/includes/reel.php'); ?>
+
 
 
 
@@ -94,431 +98,26 @@ get_header();
   *  no include abaixo
   */?>
 
-    <?php include(TEMPLATEPATH . '/includes/midia-eletronica.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/midia-eletronica.php'); ?>
 
     <?php /**
  * * Clientes são inseridos manualmente*
  *  no include abaixo
  */?>
 
-    <?php include(TEMPLATEPATH . '/includes/digital.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/digital.php'); ?>
+
+                    <?php include(TEMPLATEPATH . '/includes/case2019.php'); ?>
+
+                    <?php include(TEMPLATEPATH . '/includes/case2018.php'); ?>
+
+                    <?php include(TEMPLATEPATH . '/includes/case2017.php'); ?>
 
 
 
 
 
 
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-adidas.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-adidas.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kiss.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kiss.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-ricardo.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-ricardo.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-                <!---->
-                <!--        <div class="item-sllider-interna w-slide">-->
-                <!--          <div class="content-slide" data-ix="hover-item-slide">-->
-                <!--              <img src="images/img-prev-kop.jpg" alt="" class="img-slide-conteudos">-->
-                <!--            <div class="logo-cliente-slide">-->
-                <!--                <img src="images/logo-kop.png" alt="" class="logo-slide">-->
-                <!--            </div>-->
-                <!--          </div>-->
-                <!--        </div>-->
-
-
-    <div id="cases-2019" class="section-sliders">
-        <h2 class="h2-interna">cases 2019</h2>
-        <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-            <div class="mask-sllider-interna w-slider-mask">
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-samsung.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-samsung.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-ache.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ache.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-fogodecao.jpg"
-                                                                               alt="" class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-swift.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-guardian.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-guardian.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-yakult.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-yakult.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-latam.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-latam.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-cbc.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ofner.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow-sllider-interna left w-slider-arrow-left">
-                <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="arrow-sllider-interna right w-slider-arrow-right">
-                <div class="w-icon-slider-right"></div>
-            </div>
-            <div class="nav-sllider-interna w-slider-nav w-round"></div>
-        </div>
-    </div>
-    <div id="cases-2018" class="section-sliders">
-        <h2 class="h2-interna">cases 2018</h2>
-        <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-            <div class="mask-sllider-interna w-slider-mask">
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-samsung.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-samsung.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-ache.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ache.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-fogodecao.jpg"
-                                                                               alt="" class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-swift.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-guardian.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-guardian.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-yakult.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-yakult.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-latam.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-latam.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-cbc.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ofner.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow-sllider-interna left w-slider-arrow-left">
-                <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="arrow-sllider-interna right w-slider-arrow-right">
-                <div class="w-icon-slider-right"></div>
-            </div>
-            <div class="nav-sllider-interna w-slider-nav w-round"></div>
-        </div>
-    </div>
-    <div id="cases-2017" class="section-sliders">
-        <h2 class="h2-interna">cases 2017</h2>
-        <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-            <div class="mask-sllider-interna w-slider-mask">
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-samsung.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-samsung.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-ache.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ache.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-fogodecao.jpg"
-                                                                               alt="" class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-swift.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-guardian.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-guardian.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-yakult.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-yakult.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-latam.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-latam.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-cbc.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-ofner.png" alt="" class="logo-slide">
-                        </div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-                <div class="item-sllider-interna w-slide">
-                    <div class="content-slide" data-ix="hover-item-slide"><img src="images/img-prev-kop.jpg" alt=""
-                                                                               class="img-slide-conteudos">
-                        <div class="logo-cliente-slide"><img src="images/logo-kop.png" alt="" class="logo-slide"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow-sllider-interna left w-slider-arrow-left">
-                <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="arrow-sllider-interna right w-slider-arrow-right">
-                <div class="w-icon-slider-right"></div>
-            </div>
-            <div class="nav-sllider-interna w-slider-nav w-round"></div>
-        </div>
-    </div>
 
     <div class="modal-conteudo-interna">
         <div class="box-content-modal">
@@ -531,7 +130,7 @@ get_header();
 
 
                 <?php
-                //clwp_postsbycategory();
+
                 //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
                 $args = array(
                     'numberposts' => 1,
@@ -798,12 +397,14 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
      -->
 
 
-    <div class="modal-slide-full"><img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull"
+    <div class="modal-slide-full">
+        <img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull"
                                        data-ix="fechar-modal-slide-full-2">
         <div data-animation="slide" data-duration="500" data-infinite="1" class="slider-full w-slider">
             <div class="mask-slider-full w-slider-mask">
                 <div class="slide-full w-slide">
-                    <div class="content-slide-full"><img src="images/case-ex-01.jpg"
+                    <div class="content-slide-full">
+                        <img src="images/case-ex-01.jpg"
                                                          srcset="images/case-ex-01.jpg 500w, images/case-ex-01.jpg 800w, images/case-ex-01.jpg 1080w, images/case-ex-01.jpg 1280w"
                                                          sizes="100vw" alt="" class="img-slider-full"></div>
                 </div>
@@ -838,77 +439,58 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             <div class="nav-slide-full w-slider-nav w-round"></div>
         </div>
     </div>
-    <div class="container-modal-clientes"><img src="images/btn-fechar-modal.png" id="fecha-modal" alt=""
-                                               class="btn-fechar-modal" data-ix="fechar-modal-clientes">
+
+    <div class="container-modal-clientes">
+        <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-clientes">
         <div class="box-modal clientes">
             <h2 class="h2-modal">G l o b a i s</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
+
+                <?php if(have_rows('logos_clientes_globais',102)): while(have_rows('logos_clientes_globais',102)) : the_row(); ?>
+
+                <li class="li-clientes" data-ix="abrir-modal-cont-interna">
+                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                </li>
+
+                <?php endwhile; else : endif; ?>
+
             </ul>
+
             <h2 class="h2-modal">L o c a i s</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
-                <li class="li-clientes"><img src="images/logo-subway.png" alt=""></li>
+
+                <?php if(have_rows('logos_clientes_locais',102)): while(have_rows('logos_clientes_locais',102)) : the_row(); ?>
+
+                    <li class="li-clientes" data-ix="abrir-modal-cont-interna">
+                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                    </li>
+
+                <?php endwhile; else : endif; ?>
+
+
             </ul>
+
             <h2 class="h2-modal">principais clientes atendidos</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
+
+            <?php if(have_rows('logos_principais_clientes_atendidos',102)): while(have_rows('logos_principais_clientes_atendidos',102)) : the_row();
+
+                $pega_data = get_sub_field('data_de_entrada_na_casa');
+                $data_sistema = date('Y-m-d');
+                $pega_data_Time = new DateTime($pega_data);
+                $data_sistema_Time = new DateTime($data_sistema);
+                $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+
+            ?>
+
+                <li class="li-clientes principais" data-ix="abrir-modal-cont-interna">
+                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                    <div><?php echo $pega_diferenca->y ?> x anos</div>
                 </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
-                <li class="li-clientes principais"><img src="images/logo-subway.png" alt="">
-                    <div>x anos</div>
-                </li>
+                <?php endwhile; else : endif; ?>
+
+
+
             </ul>
         </div>
     </div>

@@ -88,7 +88,7 @@ get_header();
 
 <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
 
-<?php include(TEMPLATEPATH . '/inc/menu-internas.php'); ?>
+<?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
 
     <style>
