@@ -1,5 +1,5 @@
 <?php
-//Template Name: Rai
+//Template Name: Teola
 
 get_header();
 

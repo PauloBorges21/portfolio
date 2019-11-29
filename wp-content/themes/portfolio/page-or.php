@@ -1,5 +1,5 @@
 <?php
-//Template Name: Rai
+//Template Name: OR
 
 get_header();
 
@@ -62,7 +62,7 @@ get_header();
 
                     <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/reel.php'); ?>
+<!--                    --><?php //include(TEMPLATEPATH . '/includes/Or/reel.php'); ?>
 
 
 
@@ -71,49 +71,53 @@ get_header();
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a>
+                <a href="#apps" class="link-nav-interna">APPs</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#cases-2019" class="link-nav-interna">cases</a>
+                <a href="#mot" class="link-nav-interna">MOT</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Mídia Impressa</a>
+                <a href="#rom" class="link-nav-interna">ROM</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#digital" class="link-nav-interna">Digital</a>
+                <a href="#private" class="link-nav-interna">PRIVATE LABEL</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Design &amp; VM</a>
+                <a href="#e-commerce" class="link-nav-interna">E-COMMERCE</a>
             </li>
         </ul>
+
         <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
+
     </div>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-eletronica.php'); ?>
+
 
     <?php /**
  * * Clientes são inseridos manualmente*
  *  no include abaixo
  */?>
 
+                    <?php include(TEMPLATEPATH . '/includes/Or/apps.php'); ?>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2019.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2018.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Or/mot.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2017.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-impressa.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/digital.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Or/rom.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/design.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Or/private.php'); ?>
+
+
+                    <?php include(TEMPLATEPATH . '/includes/Or/ecommerce.php'); ?>
+
 
 
 

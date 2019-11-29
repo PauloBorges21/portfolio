@@ -1,5 +1,5 @@
 <?php
-//Template Name: Rai
+//Template Name: Awaken
 
 get_header();
 
