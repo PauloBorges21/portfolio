@@ -4,8 +4,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/portfolio-rai-2019.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/imprensa.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/agencia.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/imprensa.js" type="text/javascript"></script>
+
 <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js">
 
 </script><![endif] -->

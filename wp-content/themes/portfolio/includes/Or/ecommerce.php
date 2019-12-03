@@ -1,5 +1,5 @@
 <?php //var_dump($post_categories)  ?>
-<div id="midia-eletronica" class="section-sliders">
+<div id="ecommerce" class="section-sliders">
     <h2 class="h2-interna">E-Commerce</h2>
     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
         <div class="mask-sllider-interna w-slider-mask">
@@ -11,7 +11,7 @@
                 while ( have_rows('apresentaCards',116) ) { the_row(); //Percorre Todos os banners
 
                     $getCliente = get_sub_field('nome_do_cliente');
-                    $getLogo = get_sub_field('logo',102);
+                    $getLogo = get_sub_field('logo',116);
                     $getCliente = preg_replace('/[ -]+/' , '-' , $getCliente);
                     $exibe = get_sub_field('midia_eletronica');
 

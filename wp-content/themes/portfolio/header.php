@@ -9,6 +9,7 @@
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/components.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/portfolio-rai-2019.css" rel="stylesheet"
           type="text/css">
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/ajustes.css" rel="stylesheet" type="text/css">
 
 
     <style>@media (min-width: 992px) {

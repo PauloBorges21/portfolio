@@ -1,26 +1,24 @@
-<?php //var_dump($post_categories)  ?>
-<div id="rom" class="section-sliders">
-    <h2 class="h2-interna">ROM</h2>
+<div id="portfolio" class="section-sliders">
+    <h2 class="h2-interna">Portfólio</h2>
     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
         <div class="mask-sllider-interna w-slider-mask">
 
-            <?php //include(TEMPLATEPATH . '/includes/midia-reel.php'); ?>
 
-            <?php  if( have_rows('apresentaCards',116)){ //Se existir banner
+            <?php  if( have_rows('apresentaCards',104)){ //Se existir banner
 
-                while ( have_rows('apresentaCards',116) ) { the_row(); //Percorre Todos os banners
+                while ( have_rows('apresentaCards',104) ) { the_row(); //Percorre Todos os banners
 
                     $getCliente = get_sub_field('nome_do_cliente');
-                    $getLogo = get_sub_field('logo',116);
+                    $getLogo = get_sub_field('logo',104);
                     $getCliente = preg_replace('/[ -]+/' , '-' , $getCliente);
-                    $exibe = get_sub_field('midia_eletronica');
+                    $exibe = get_sub_field('digital');
 
 
 
                     $args = array(
                         'numberposts' => 1,
                         //'posts_per_page' => 1,
-                        'category' => array(16),
+                        'category' => array(19),
                         'orderby' => 'date',
                         'order' => 'DESC',
                         'include' => array(),
@@ -129,3 +127,4 @@
         </div>
     </div>
 </div>
+

@@ -62,7 +62,7 @@ get_header();
 
                     <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/reel.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/ANI/principal.php'); ?>
 
 
 
@@ -71,49 +71,36 @@ get_header();
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a>
+                <a href="#filmes" class="link-nav-interna">Filmes</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#cases-2019" class="link-nav-interna">cases</a>
+                <a href="#portfolio" class="link-nav-interna">Portfólio</a>
             </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Mídia Impressa</a>
-            </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#digital" class="link-nav-interna">Digital</a>
-            </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Design &amp; VM</a>
-            </li>
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#" class="link-nav-interna">Mídia Impressa</a>-->
+<!--            </li>-->
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#digital" class="link-nav-interna">Digital</a>-->
+<!--            </li>-->
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#" class="link-nav-interna">Design &amp; VM</a>-->
+<!--            </li>-->
         </ul>
         <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
     </div>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-eletronica.php'); ?>
-
-    <?php /**
- * * Clientes são inseridos manualmente*
- *  no include abaixo
- */?>
 
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2019.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/ANI/filmes.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2018.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/ANI/portfolio.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2017.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-impressa.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/digital.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/design.php'); ?>
 
 
 

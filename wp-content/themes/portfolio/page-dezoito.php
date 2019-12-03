@@ -62,7 +62,7 @@ get_header();
 
                     <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-<!--                    --><?php //include(TEMPLATEPATH . '/includes/Or/reel.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Dezoito/post-destaque.php'); ?>
 
 
 
@@ -71,23 +71,23 @@ get_header();
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#apps" class="link-nav-interna">APPs</a>
+                <a href="#apresentacao-influen" class="link-nav-interna">Apresentação Influenciadores</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#mot" class="link-nav-interna">MOT</a>
+                <a href="#apresentacao-pr" class="link-nav-interna">Apresentação PR</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#rom" class="link-nav-interna">ROM</a>
+                <a href="#quem-somos" class="link-nav-interna">Quem Somos</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#private" class="link-nav-interna">PRIVATE LABEL</a>
+                <a href="#cases-pr" class="link-nav-interna">Cases PR</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#e-commerce" class="link-nav-interna">E-COMMERCE</a>
+                <a href="#cases-influenciadores" class="link-nav-interna">Cases Influenciadores</a>
             </li>
         </ul>
 
@@ -96,27 +96,20 @@ get_header();
     </div>
 
 
-
-
-    <?php /**
- * * Clientes são inseridos manualmente*
- *  no include abaixo
- */?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Or/apps.php'); ?>
+                     <?php include(TEMPLATEPATH . '/includes/Dezoito/apresentacao-pr.php'); ?>
 
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Or/mot.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Dezoito/apresentacao-influenciadores.php'); ?>
 
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Or/rom.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Dezoito/quem-somos.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Or/private.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Dezoito/cases-pr.php'); ?>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Or/ecommerce.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/Dezoito/cases-influenciadores.php'); ?>
 
 
 

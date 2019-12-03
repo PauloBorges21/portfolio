@@ -62,7 +62,7 @@ get_header();
 
                     <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/reel.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/TEOLA/reel.php'); ?>
 
 
 
@@ -71,49 +71,33 @@ get_header();
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a>
+                <a href="#filmes" class="link-nav-interna">Filmes</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#cases-2019" class="link-nav-interna">cases</a>
+                <a href="#fotos" class="link-nav-interna">Fotos</a>
             </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Mídia Impressa</a>
-            </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#digital" class="link-nav-interna">Digital</a>
-            </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#" class="link-nav-interna">Design &amp; VM</a>
-            </li>
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#" class="link-nav-interna">Mídia Impressa</a>-->
+<!--            </li>-->
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#digital" class="link-nav-interna">Digital</a>-->
+<!--            </li>-->
+<!---->
+<!--            <li class="li-nav-interna w-clearfix">-->
+<!--                <a href="#" class="link-nav-interna">Design &amp; VM</a>-->
+<!--            </li>-->
         </ul>
         <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
     </div>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-eletronica.php'); ?>
-
-    <?php /**
- * * Clientes são inseridos manualmente*
- *  no include abaixo
- */?>
+                    <?php include(TEMPLATEPATH . '/includes/TEOLA/filmes.php'); ?>
+                    <?php include(TEMPLATEPATH . '/includes/TEOLA/fotos.php'); ?>
 
 
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2019.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2018.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2017.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-impressa.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/digital.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/design.php'); ?>
 
 
 
@@ -446,10 +430,10 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             <h2 class="h2-modal">G l o b a i s</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
 
-                <?php if(have_rows('logos_clientes_globais',102)): while(have_rows('logos_clientes_globais',102)) : the_row(); ?>
+                <?php if(have_rows('logos_clientes_globais',108)): while(have_rows('logos_clientes_globais',108)) : the_row(); ?>
 
                 <li class="li-clientes" data-ix="abrir-modal-cont-interna">
-                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                    <img src="<?php the_sub_field('imagem_logo',108);?>" alt="">
                 </li>
 
                 <?php endwhile; else : endif; ?>
@@ -459,10 +443,10 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             <h2 class="h2-modal">L o c a i s</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
 
-                <?php if(have_rows('logos_clientes_locais',102)): while(have_rows('logos_clientes_locais',102)) : the_row(); ?>
+                <?php if(have_rows('logos_clientes_locais',108)): while(have_rows('logos_clientes_locais',108)) : the_row(); ?>
 
                     <li class="li-clientes" data-ix="abrir-modal-cont-interna">
-                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                        <img src="<?php the_sub_field('imagem_logo',108);?>" alt="">
                     </li>
 
                 <?php endwhile; else : endif; ?>
@@ -473,7 +457,7 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             <h2 class="h2-modal">principais clientes atendidos</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
 
-            <?php if(have_rows('logos_principais_clientes_atendidos',102)): while(have_rows('logos_principais_clientes_atendidos',102)) : the_row();
+            <?php if(have_rows('logos_principais_clientes_atendidos',108)): while(have_rows('logos_principais_clientes_atendidos',108)) : the_row();
 
                 $pega_data = get_sub_field('data_de_entrada_na_casa');
                 $data_sistema = date('Y-m-d');
@@ -484,7 +468,7 @@ if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post);
             ?>
 
                 <li class="li-clientes principais" data-ix="abrir-modal-cont-interna">
-                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                    <img src="<?php the_sub_field('imagem_logo',108);?>" alt="">
                     <div><?php echo $pega_diferenca->y ?> x anos</div>
                 </li>
                 <?php endwhile; else : endif; ?>
