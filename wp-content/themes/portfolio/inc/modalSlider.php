@@ -1,5 +1,5 @@
 <div class="modal-video-full" id="modalSlideFull">
-    <img src="images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-slide-full-2">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-fechar="fechar-modal-slide-full" onclick="fechaM(this)">
     <div data-animation="slide" data-duration="500" data-infinite="1" class="slider-full w-slider">
         <div class="mask-slider-full w-slider-mask">
 

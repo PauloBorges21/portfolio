@@ -745,7 +745,7 @@ body {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  z-index: 9999999999999;
+  z-index: 999999999;
   display: none;
   overflow: auto;
   width: 100%;
@@ -1143,7 +1143,6 @@ body {
 
 .video-slider {
   width: 90%;
-  height: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1155,8 +1154,8 @@ body {
   display: flex;
   overflow: hidden;
   height: 100%;
-  padding-right: 110px;
-  padding-left: 110px;
+  padding-right: 70px;
+  padding-left: 70px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1165,6 +1164,7 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 99999999999999999;
 }
 
 .content-slide-full {
@@ -1267,39 +1267,6 @@ body {
   align-items: center;
 }
 
-.banner-clientes {
-  height: 240px;
-  background-image: url('../images/bg-banner-interna.jpg');
-  background-position: 50% 50%;
-  background-size: auto;
-  background-repeat: repeat;
-}
-
-.ul-pg-clientes {
-  margin-top: 45px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.li-pg-clientes {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 16.6666666667%;
-  margin-bottom: 45px;
-  padding: 15px;
-  float: left;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 @media (max-width: 991px) {
   .grid-home {
     -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1392,12 +1359,6 @@ body {
   }
   .container-modal-imprensa {
     padding: 60px;
-  }
-  .ul-pg-clientes {
-    padding-left: 0px;
-  }
-  .li-pg-clientes {
-    width: 25%;
   }
 }
 
@@ -1507,13 +1468,6 @@ body {
     overflow: auto;
     padding: 40px;
   }
-  .container-clientes {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .li-pg-clientes {
-    margin-bottom: 0px;
-  }
 }
 
 @media (max-width: 479px) {
@@ -1574,9 +1528,6 @@ body {
   }
   .li-imprensa {
     width: 100%;
-  }
-  .li-pg-clientes {
-    width: 50%;
   }
 }
 

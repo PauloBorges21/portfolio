@@ -1,23 +1,26 @@
-<div id="portfolio" class="section-sliders">
-    <h2 class="h2-interna">Portfólio</h2>
+<?php //var_dump($post_categories)  ?>
+<div id="mot" class="section-sliders">
+    <h2 class="h2-interna">MOT</h2>
     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
         <div class="mask-sllider-interna w-slider-mask">
 
-            <?php if (have_rows('apresentaCards', 104)) { //Se existir banner
+            <?php //include(TEMPLATEPATH . '/includes/midia-reel.php'); ?>
 
-                while (have_rows('apresentaCards', 104)) {
+            <?php if (have_rows('apresentaCards', 116)) { //Se existir banner
+
+                while (have_rows('apresentaCards', 116)) {
                     the_row(); //Percorre Todos os banners
 
                     $getCliente = get_sub_field('nome_do_cliente');
-                    $getLogo = get_sub_field('logo', 104);
+                    $getLogo = get_sub_field('logo', 116);
                     $getCliente = preg_replace('/[ -]+/', '-', $getCliente);
-                    $exibe = get_sub_field('portfolio');
+                    $exibe = get_sub_field('mot');
 
 
                     $args = array(
                         'numberposts' => 1,
                         //'posts_per_page' => 1,
-                        'category' => array(63),
+                        'category' => array(55),
                         'orderby' => 'date',
                         'order' => 'DESC',
                         'include' => array(),
@@ -60,7 +63,7 @@
 
                             <div class="item-sllider-interna w-slide"
                                  data-slidermd="<?php echo $getCliente ?>-<?php echo $post->ID ?>"
-                                 onclick="SliderModalPrincipal(this)">
+                                 onclick="SliderModalPrincipal(this)"  data-menu="modal-mot">
 
                                 <!--            <div class="content-slide" data-ix="hover-item-slide">-->
                                 <div class="content-slide">
@@ -73,16 +76,14 @@
 
 
                                 <form action="/" data-form="<?php echo $getCliente ?>-<?php echo $post->ID ?>">
-                                    <input hidden="" name="imagemDestaque"
-                                           value="<?php echo the_field('imagem_modal'); ?>">
+                                    <input hidden="" name="imagemDestaque" value="<?php echo the_field('imagem_modal'); ?>">
                                     <input hidden="" name="tituloDestaque" value="<?php echo $title ?>">
                                     <input hidden="" name="contentDestaque" value="<?php echo $content ?>">
 
                                 </form>
 
 
-                                <form action="/"
-                                      data-form="Slider-<?php echo $getCliente ?>-<?php echo $post->ID ?>">
+                                <form action="/"  data-form="Slider-<?php echo $getCliente ?>-<?php echo $post->ID ?>">
 
                                     <?php if (have_rows('slider_modal_post')): while (have_rows('slider_modal_post')) : the_row(); ?>
 
@@ -121,7 +122,7 @@
                         ?>
 
 
-                        <br/><br/>
+
                         <?php
                     } //Fim else
                 }
@@ -130,6 +131,7 @@
             //fim do loop de posts
             ?>
         </div>
+
         <div class="arrow-sllider-interna left w-slider-arrow-left">
             <div class="w-icon-slider-left"></div>
         </div>
@@ -140,7 +142,8 @@
     </div>
 </div>
 
-<div class="modal-conteudo-interna" id="modal-midiaEletronica">
+
+<div class="modal-conteudo-interna" id="modal-mot">
     <div class="box-content-modal">
         <div class="container-video-modal">
             <!--            <div class="box-destq-conteudo" data-ix="abrir-modal-video-full" onclick="sliderModalSliders(obj)">-->
@@ -148,7 +151,7 @@
                 <!--Imagem do Vídeo do CLiente via JavaScipt-->
             </div>
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar.png" alt=""
-                 class="btn-fechar-modal-conteudo" onclick="fechaME()">
+                 class="btn-fechar-modal-conteudo" onclick="fechaME(this)" data-rai="modal-mot">
         </div>
         <div class="desc-video-modal">
             <!--Aqui vai o título e o texto via JavaScript-->
@@ -163,7 +166,7 @@
                 //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
                 $args = array(
                     //'numberposts' => 1,
-                    'category' => 15,
+                    'category' => 28,
                     'orderby' => 'date',
                     'order' => 'DESC',
                     'include' => array(),
@@ -243,5 +246,3 @@
         </div>
     </div>
 </div>
-
-

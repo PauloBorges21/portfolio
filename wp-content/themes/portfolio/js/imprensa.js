@@ -76,12 +76,19 @@ function showSlidesMarvel(n) {
 
 
 
-
+var nomeID;
 
 function SliderModalPrincipal(obj){
+
+
+
+
     var idMidia = obj.getAttribute('data-slidermd');
 
-    var modal = document.getElementById("modal-midiaEletronica");
+    nomeID = obj.getAttribute('data-menu');
+
+
+    var modal = document.getElementById(nomeID);
 
     var formCardMidia = document.querySelector('[data-form="' + idMidia + '"]');
 
@@ -91,9 +98,11 @@ function SliderModalPrincipal(obj){
     criarImgDest.classList.add("img-destq-conteudo");
     criarImgDest.src = imgDest.value;
     var nameFormSlider = "Slider-" + idMidia;
+
     criarImgDest.setAttribute('data-sliderModalCliente', nameFormSlider);
     var boxModal = modal.querySelector(".box-destq-conteudo");
     boxModal.appendChild(criarImgDest);
+
 
 
     /*Título de destaque do Modal*/
@@ -117,10 +126,16 @@ function SliderModalPrincipal(obj){
     modal.style.opacity='1';
     modal.style.transform='scaleX(1) scaleY(1) scaleZ(1)';
     modal.style.transition='transform 600ms ease 0s, opacity 350ms ease 0s';
+
+    return nomeID;
 }
 
-function fechaME(){
-    document.getElementById('modal-midiaEletronica').style.display='none';
+function fechaME(obj){
+
+
+    var modalFechar = obj.getAttribute('data-rai');
+    //modalFechar = innerHTML.display.none;
+    document.getElementById(modalFechar).style.display='none';
     var boxModal = document.querySelector(".box-destq-conteudo");
     var textoModal = document.querySelector(".desc-video-modal");
 
@@ -143,19 +158,68 @@ function fechaME(){
         }
     }
 
-    // slideIndex = 1;
+    window.location.reload();
 }
 
 
+
+
+function fechaM(obj) {
+
+
+    var modalFechar = obj.getAttribute('data-fechar');
+    //modalFechar = innerHTML.display.none;
+    document.getElementById('modalSlideFull').style.display = 'none';
+
+
+    var mask = document.querySelector(".mask-slider-full.w-slider-mask");
+
+
+    //Pegar o Slide full a ser removido
+
+    var removeFull = mask.querySelectorAll(".slide-full.w-slide");
+    if(mask.children.length > 0){
+
+
+         //var itens = removeFull.querySelectorAll('.slide-full.w-slide');
+        // var txtCriado = textoModal.querySelectorAll('.p-conteudo');
+
+        for (var i = 0; i < removeFull.length; i++) {
+            mask.removeChild(removeFull[i]);
+
+            window.location.reload();
+        }
+
+
+        //
+        // for (var i = 0; i < tituloCriado.length; i++) {
+        //     mask.removeChild(tituloCriado[i]);
+        // }
+        //
+        // for (var i = 0; i < txtCriado.length; i++) {
+        //     mask.removeChild(txtCriado[i]);
+        // }
+    }
+
+
+}
+
+
+
 function sliderModalSliders(obj){
-    debugger;
+
+
+
+
+   // var nomeIDFull = obj.getAttribute('data-video-full');
 
     var videoClicado = obj.children;
     videoClicado = videoClicado[0].getAttribute('data-sliderModalCliente');
 
     //Selecionar Modal para implementar os elementos
-    var modal = document.getElementById("modalSlideFull");
+    var modal = document.getElementById('modalSlideFull');
     modal = modal.querySelector(".mask-slider-full");
+
 
     // Selecionar o Form
     var formItensSliders = document.querySelector('[data-form="' + videoClicado + '"]');
@@ -166,14 +230,19 @@ function sliderModalSliders(obj){
 
     // Soma os arrays para apresentar ou não as setas do slider
     var soma = imagensModalSlider.length + videosModalSlider.length;
+
+
     if(soma < 2){
+
         document.querySelector('.arrow-slide-full.esq.w-slider-arrow-left').style.display = "none";
         document.querySelector('.arrow-slide-full.dir.w-slider-arrow-right').style.display = "none";
+
     }
 
     if(imagensModalSlider.length >= 1){
         // Montar itens de imagem para o slide
         for(var i = 0; i < imagensModalSlider.length; i++){
+
 
             // Criar Div Para o Efeito de Slide
             var criarSlideFull = document.createElement('div');
@@ -197,13 +266,16 @@ function sliderModalSliders(obj){
     }
 
     if(videosModalSlider.length >= 1){
+
         // Montar itens de imagem para o slide
         for(var i = 0; i < videosModalSlider.length; i++){
+
 
             // Criar Div Para o Efeito de Slide
             var criarSlideFull = document.createElement('div');
             criarSlideFull.classList.add("slide-full");
             criarSlideFull.classList.add("w-slide");
+
 
             // Criar Div de Container para o vídeo
             var criarContainerVideo = document.createElement('div');
@@ -216,14 +288,119 @@ function sliderModalSliders(obj){
             criarIframeSliderModal.setAttribute('scrolling', '0');
             criarIframeSliderModal.setAttribute('allow', 'autoplay; fullscreen');
             criarIframeSliderModal.setAttribute('allowfullscreen', 'true');
+
+
             criarIframeSliderModal.style = "position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto";
             var src = 'https://www.youtube.com/embed/' + videosModalSlider[i].value + '?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0';
+
+
+
             criarIframeSliderModal.src = src;
+            //alert("criando container");
 
             criarContainerVideo.appendChild(criarIframeSliderModal);
             modal.appendChild(criarSlideFull);
         }
     }
 
-    console.log(imagensModalSlider);
+
+    //alert(document.getElementById("modalSlideFull").outerHTML);
+    //criarContainerVideo.appendChild(criarIframeSliderModal);
+    //modal.appendChild(criarSlideFull);
+
+    //modal.parentElement.appendChild(criarSlideFull);
+    //document.getElementById("modalSlideFull").style.display = "flex";
+    //document.getElementById("modalSlideFull").style.opacity = "1";
+
+    //teste.style.opacity = 0;
+
+
+//    console.log(imagensModalSlider);
+}
+
+
+
+
+function sliderModalVejaMais(obj){
+
+
+
+    var nomeIDFullVeja = obj.getAttribute('data-video-full');
+
+    var videoClicado = obj.children;
+    videoClicado = videoClicado[0].getAttribute('data-sliderModalVeja');
+
+    //Selecionar Modal para implementar os elementos
+    var modal = document.getElementById("modalSlideFull");
+    modal = modal.querySelector(".mask-slider-full");
+
+    // Selecionar o Form
+    var formItensSlidersVeja = document.querySelector('[data-form="' + videoClicado + '"]');
+    // Selecionar as imagens dentro do Form
+    var imagensModalSliderVeja = formItensSlidersVeja.querySelectorAll("[name='imagemModalVejaMais']");
+    // Selecionar os vídeos dentro do Form
+    var videosModalSliderVeja = formItensSlidersVeja.querySelectorAll("[name='urlVideoVejaMais']");
+
+    // Soma os arrays para apresentar ou não as setas do slider
+    var soma = imagensModalSliderVeja.length + videosModalSliderVeja.length;
+    if(soma < 2){
+        document.querySelector('.arrow-slide-full.esq.w-slider-arrow-left').style.display = "none";
+        document.querySelector('.arrow-slide-full.dir.w-slider-arrow-right').style.display = "none";
+    }
+
+    if(imagensModalSliderVeja.length >= 1){
+        // Montar itens de imagem para o slide
+        for(var i = 0; i < imagensModalSliderVeja.length; i++){
+
+            // Criar Div Para o Efeito de Slide
+            var criarSlideFullVeja = document.createElement('div');
+            criarSlideFullVeja.classList.add("slide-full");
+            criarSlideFullVeja.classList.add("w-slide");
+
+            // Criar Div de Content para a imagem
+            var criarContentSlideVeja = document.createElement('div');
+            criarContentSlideVeja.classList.add("content-slide-full");
+            criarSlideFullVeja.appendChild(criarContentSlideVeja);
+
+            // Criar Imagem
+            var criarImgSliderModalVeja = document.createElement('img');
+            criarImgSliderModalVeja.classList.add("img-slider-full");
+            criarImgSliderModalVeja.src = imagensModalSliderVeja[i].value;
+            criarContentSlideVeja.appendChild(criarImgSliderModalVeja);
+
+            //Inserir tudo no modal
+            modal.appendChild(criarSlideFullVeja);
+        }
+    }
+
+    if(videosModalSliderVeja.length >= 1){
+        // Montar itens de imagem para o slide
+        for(var i = 0; i < videosModalSliderVeja.length; i++){
+
+            // Criar Div Para o Efeito de Slide
+            var criarSlideFullVeja = document.createElement('div');
+            criarSlideFullVeja.classList.add("slide-full");
+            criarSlideFullVeja.classList.add("w-slide");
+
+            // Criar Div de Container para o vídeo
+            var criarContainerVideoVeja = document.createElement('div');
+            criarContainerVideoVeja.classList.add("container-video-slider");
+            criarSlideFullVeja.appendChild(criarContainerVideoVeja);
+
+            // Criar Vídeo
+            var criarIframeSliderModalVeja = document.createElement('iframe');
+            criarIframeSliderModalVeja.setAttribute('frameborder', '0');
+            criarIframeSliderModalVeja.setAttribute('scrolling', '0');
+            criarIframeSliderModalVeja.setAttribute('allow', 'autoplay; fullscreen');
+            criarIframeSliderModalVeja.setAttribute('allowfullscreen', 'true');
+            criarIframeSliderModalVeja.style = "position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto";
+            var src = 'https://www.youtube.com/embed/' + videosModalSliderVeja[i].value + '?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0';
+            criarIframeSliderModalVeja.src = src;
+
+            criarContainerVideoVeja.appendChild(criarIframeSliderModalVeja);
+            modal.appendChild(criarSlideFullVeja);
+        }
+    }
+
+    console.log(imagensModalSliderVeja);
 }

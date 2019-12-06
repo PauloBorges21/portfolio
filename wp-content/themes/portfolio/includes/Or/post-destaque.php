@@ -48,11 +48,21 @@ $cat_nome = get_the_category($post->ID);
         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/btn-fechar.png" alt="" class="fechar-modal-videofull" data-ix="fechar-modal-vid-full-2">
         <div style="padding-top:56.17021276595745%" id="w-node-037b54e34f33-adef43ab"
              class="w-embed-youtubevideo videofull">
-            <iframe src="https://www.youtube.com/embed/<?php echo the_field('url_youtube'); ?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0"
+    <?php if (have_rows('slider_modal_post')): while (have_rows('slider_modal_post')) : the_row(); ?>
+            <?php if (have_rows('url_slide_modal')): while (have_rows('url_slide_modal')) : the_row(); ?>
+                <?php $urlSliderModal = get_sub_field('url'); ?>
+
+                <input hidden="" name="urlVideoVejaMais"
+                       value="<?php echo $urlSliderModal ?>">
+
+
+            <iframe src="https://www.youtube.com/embed/<?php echo $urlSliderModal; ?>?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0"
                     frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
                     allow="autoplay; encrypted-media" allowfullscreen="">
 
             </iframe>
+            <?php endwhile; else : endif; ?>
+    <?php endwhile; else : endif; ?>
         </div>
     </div>
 

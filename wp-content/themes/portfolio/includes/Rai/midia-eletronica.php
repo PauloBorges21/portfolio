@@ -1,10 +1,7 @@
-<?php //var_dump($post_categories)  ?>
-    <div id="midia-eletronica" class="section-sliders">
+<div id="midia-eletronica" class="section-sliders">
         <h2 class="h2-interna">Mídia Eletrônica</h2>
         <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
             <div class="mask-sllider-interna w-slider-mask">
-
-                <?php //include(TEMPLATEPATH . '/includes/midia-reel.php'); ?>
 
                 <?php if (have_rows('apresentaCards', 102)) { //Se existir banner
 
@@ -34,8 +31,6 @@
                             //'offset' => 1
                         );
 
-//inicio do loop de posts
-//var_dump($post_categories);
 
 
                         if ($exibe == "Sim") {    // Se selecionado para exibir
@@ -65,7 +60,7 @@
 
                                 <div class="item-sllider-interna w-slide"
                                      data-slidermd="<?php echo $getCliente ?>-<?php echo $post->ID ?>"
-                                     onclick="SliderModalPrincipal(this)">
+                                     onclick="SliderModalPrincipal(this)"  data-menu="modal-midiaEletronica">
 
                                     <!--            <div class="content-slide" data-ix="hover-item-slide">-->
                                     <div class="content-slide">
@@ -126,7 +121,7 @@
                             ?>
 
 
-                            <br/><br/>
+
                             <?php
                         } //Fim else
                     }
@@ -135,6 +130,7 @@
                 //fim do loop de posts
                 ?>
             </div>
+
             <div class="arrow-sllider-interna left w-slider-arrow-left">
                 <div class="w-icon-slider-left"></div>
             </div>
@@ -145,6 +141,7 @@
         </div>
     </div>
 
+
     <div class="modal-conteudo-interna" id="modal-midiaEletronica">
         <div class="box-content-modal">
             <div class="container-video-modal">
@@ -153,12 +150,13 @@
                     <!--Imagem do Vídeo do CLiente via JavaScipt-->
                 </div>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar.png" alt=""
-                     class="btn-fechar-modal-conteudo" onclick="fechaME()">
+                     class="btn-fechar-modal-conteudo" onclick="fechaME(this)" data-rai="modal-midiaEletronica">
             </div>
             <div class="desc-video-modal">
                 <!--Aqui vai o título e o texto via JavaScript-->
             </div>
-            <div class="container-videos-relacionados">
+
+            <div class="container-videos-relacionados" id="modalSlideVejaMais">
                 <h3 class="h3-conteudo">Veja também</h3>
                 <ul class="ul-veja-tambem w-clearfix w-list-unstyled">
 
@@ -166,8 +164,8 @@
 
                     //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
                     $args = array(
-                        //'numberposts' => 15,
-                        'category' => array(15),
+                        //'numberposts' => 1,
+                        'category' => 15,
                         'orderby' => 'date',
                         'order' => 'DESC',
                         'include' => array(),
@@ -181,28 +179,66 @@
                     );
                     $my_query = new Wp_Query($args);
 
-                    if ($my_query->have_posts()) :
-                        while ($my_query->have_posts()) : $my_query->the_post();
+                    $my_posts = get_posts($args);
+                    $post_categories = get_terms($args);
+                    foreach ($my_posts as $post) : setup_postdata($post);
 
-//echo var_dump($my_query);
-                            ?>
+                        $tags = wp_get_post_tags($post->ID);
 
-                            <li class="li-veja-tambem">
-                                <div class="box-img-vejatambem"
-                                     onclick="sliderModalSliders(this)">
-                                    <img src="<?php echo the_field('thumb_veja_mais'); ?>" alt=""
-                                         class="img-prev-veja-tambem">
-                                </div>
-                            </li>
+                        $my_query = new Wp_Query($args);
+                        $my_posts = get_posts($args);
+                        $post_categories = get_terms($args);
+
+                        $getCliente = $post_categories->name;
+                        $getCliente = mb_strtolower($getCliente, 'UTF-8');
+                        $title = get_the_title($post->ID, '', '', false);
+                        $content = get_the_content($post->ID, '', '', false);
+
+                        //var_dump($post_categories);
+                        ?>
+                        <form action="/" data-form="SliderVejaMais-<?php echo $post->ID ?>">
+
+                            <?php if (have_rows('slider_modal_post')): while (have_rows('slider_modal_post')) : the_row(); ?>
+
+                                <?php if (have_rows('imagem_slide_modal')): while (have_rows('imagem_slide_modal')) : the_row(); ?>
+
+                                    <?php $imagemSliderModal = get_sub_field('imagem'); ?>
+
+                                    <input hidden="" name="imagemModalVejaMais"
+                                           value="<?php echo $imagemSliderModal ?>">
+
+                                <?php endwhile; else : endif; ?>
+
+                                <?php if (have_rows('url_slide_modal')): while (have_rows('url_slide_modal')) : the_row(); ?>
+                                    <?php $urlSliderModal = get_sub_field('url'); ?>
+
+                                    <input hidden="" name="urlVideoVejaMais"
+                                           value="<?php echo $urlSliderModal ?>">
+
+                                <?php endwhile; else : endif; ?>
+                            <?php endwhile; else : endif; ?>
+
+                        </form>
 
 
-                        <?php endwhile;; endif; //fim do loop de posts ?>
+                        <li class="li-veja-tambem">
 
-                    <!--                <li class="li-veja-tambem">-->
-                    <!--                    <div class="box-img-vejatambem" data-ix="abrir-modal-slide-full"  onclick="sliderModalSliders(this)>-->
-                    <!--                        <img src="images/prev-veja-tambem-02.jpg" alt="" class="img-prev-veja-tambem">-->
-                    <!--                    </div>-->
-                    <!--                </li>-->
+                            <div class="box-img-vejatambem"
+                                 onclick="sliderModalVejaMais(this)" data-ix="abrir-modal-video-full">
+                                <img src="<?php echo the_field('thumb_veja_mais'); ?>" alt=""
+                                     class="img-prev-veja-tambem" data-sliderModalVeja = "SliderVejaMais-<?php echo $post->ID ?>" >
+                            </div>
+                        </li>
+
+
+                    <?php
+                    endforeach; ?>
+
+<!--                                    <li class="li-veja-tambem">-->
+<!--                                        <div class="box-img-vejatambem" data-ix="abrir-modal-slide-full"  onclick="sliderModalSliders(this)>-->
+<!--                                            <img src="images/prev-veja-tambem-02.jpg" alt="" class="img-prev-veja-tambem">-->
+<!--                                        </div>-->
+<!--                                    </li>-->
 
 
                 </ul>

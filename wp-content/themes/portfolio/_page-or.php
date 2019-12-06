@@ -1,8 +1,6 @@
 <?php
-//Template Name: Rai
-
+//Template Name: OR2
 get_header();
-
 ?>
     <style>
         .box-modal.equipe {
@@ -51,18 +49,17 @@ get_header();
     </style>
     </head>
 
-
     <body class="body-interna">
 
-                    <?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
+    <?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
+    <?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
+    <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
+    <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/reel.php'); ?>
+    <?php include(TEMPLATEPATH . '/includes/Or/post-destaque.php'); ?>
 
 
 
@@ -71,45 +68,43 @@ get_header();
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#midia-eletronica" class="link-nav-interna">Mídia Eletrônica</a>
+                <a href="#apps" class="link-nav-interna">APPs</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#cases-2019" class="link-nav-interna">cases</a>
+                <a href="#mot" class="link-nav-interna">MOT</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#midia-impressa" class="link-nav-interna">Mídia Impressa</a>
+                <a href="#rom" class="link-nav-interna">ROM</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#digital" class="link-nav-interna">Digital</a>
+                <a href="#private" class="link-nav-interna">PRIVATE LABEL</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#design" class="link-nav-interna">Design &amp; VM</a>
+                <a href="#ecommerce" class="link-nav-interna">E-COMMERCE</a>
             </li>
         </ul>
-        <a href="<?php echo get_site_url() ?>/clientes" class="link-nav-interna">clientes</a>
+
+        <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
+
     </div>
 
 
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-eletronica.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2019.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2018.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/case2017.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/midia-impressa.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/digital.php'); ?>
-
-                    <?php include(TEMPLATEPATH . '/includes/Rai/design.php'); ?>
 
 
 
+<!--    --><?php //include(TEMPLATEPATH . '/includes/Or/apps.php'); ?>
+
+    <?php include(TEMPLATEPATH . '/includes/Or/mot.php'); ?>
+
+<!--    --><?php //include(TEMPLATEPATH . '/includes/Or/rom.php'); ?>
+
+<!--    --><?php //include(TEMPLATEPATH . '/includes/Or/private.php'); ?>
+
+<!--    --><?php //include(TEMPLATEPATH . '/includes/Or/ecommerce.php'); ?>
 
 
     <div class="modal-conteudo-interna">
@@ -127,7 +122,7 @@ get_header();
                 //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
                 $args = array(
                     'numberposts' => 1,
-                    'category' => array(15),
+                    'category' => array(28),
                     'orderby' => 'date',
                     'order' => 'DESC',
                     'include' => array(),
@@ -165,11 +160,12 @@ get_header();
             </div>
             <div class="desc-video-modal">
                 <h2 class="h2-conteudo"><?= $title ?></h2>
-                <div><?= $content ?></div>
+                <div><?= $content ?> </div>
             </div>
 
             <?php endforeach;
             endif; ?>
+
 
     <div class="container-modal-clientes">
         <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-clientes">
@@ -179,9 +175,9 @@ get_header();
 
                 <?php if(have_rows('logos_clientes_globais',102)): while(have_rows('logos_clientes_globais',102)) : the_row(); ?>
 
-                <li class="li-clientes" data-ix="abrir-modal-cont-interna">
-                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
-                </li>
+                    <li class="li-clientes" data-ix="abrir-modal-cont-interna">
+                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                    </li>
 
                 <?php endwhile; else : endif; ?>
 
@@ -204,20 +200,20 @@ get_header();
             <h2 class="h2-modal">principais clientes atendidos</h2>
             <ul class="ul-clientes w-clearfix w-list-unstyled">
 
-            <?php if(have_rows('logos_principais_clientes_atendidos',102)): while(have_rows('logos_principais_clientes_atendidos',102)) : the_row();
+                <?php if(have_rows('logos_principais_clientes_atendidos',102)): while(have_rows('logos_principais_clientes_atendidos',102)) : the_row();
 
-                $pega_data = get_sub_field('data_de_entrada_na_casa');
-                $data_sistema = date('Y-m-d');
-                $pega_data_Time = new DateTime($pega_data);
-                $data_sistema_Time = new DateTime($data_sistema);
-                $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+                    $pega_data = get_sub_field('data_de_entrada_na_casa');
+                    $data_sistema = date('Y-m-d');
+                    $pega_data_Time = new DateTime($pega_data);
+                    $data_sistema_Time = new DateTime($data_sistema);
+                    $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
 
-            ?>
+                    ?>
 
-                <li class="li-clientes principais" data-ix="abrir-modal-cont-interna">
-                    <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
-                    <div><?php echo $pega_diferenca->y ?> x anos</div>
-                </li>
+                    <li class="li-clientes principais" data-ix="abrir-modal-cont-interna">
+                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
+                        <div><?php echo $pega_diferenca->y ?> x anos</div>
+                    </li>
                 <?php endwhile; else : endif; ?>
 
 
@@ -228,5 +224,6 @@ get_header();
 
 
 
+<?php include(TEMPLATEPATH . '/inc/modalSlider.php'); ?>
 
 <?php get_footer(); ?>
