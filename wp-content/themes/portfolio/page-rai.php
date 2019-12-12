@@ -90,8 +90,16 @@ get_header();
                 <a href="#design" class="link-nav-interna">Design &amp; VM</a>
             </li>
         </ul>
-        <a href="<?php echo get_site_url() ?>/clientes" class="link-nav-interna">clientes</a>
+        <form action="<?php echo get_site_url();?>/clientes/" method="POST">
+            <?php $urlPagina = 102 ;?>
+
+
+                <input hidden=""  name="getUrl" value="<?= $urlPagina?>">
+                <input class="link-nav-interna btncliente" type="submit" value="Cliente" >
+
+        </form>
     </div>
+
 
 
                     <?php include(TEMPLATEPATH . '/includes/Rai/midia-eletronica.php'); ?>

@@ -110,7 +110,7 @@ get_header();
     </div>
     <div class="section-imprensa">
         <div class="container-imprensa w-container">
-            <a href="<?php echo get_site_url() ?>/menu-page" class="link-voltar">Voltar</a>
+            <a href="javascript:history.go(-1)" class="link-voltar">Voltar</a>
             <ul class="ul-imprensa w-clearfix w-list-unstyled">
 
                 <?php if (have_rows('adicionar_slider')): while (have_rows('adicionar_slider')) : the_row();
