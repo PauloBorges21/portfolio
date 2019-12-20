@@ -1,6 +1,6 @@
 
 function teste(obj) {
-    debugger;
+
     var idMidia = obj.getAttribute('data-slidermd');
 
     var modal = document.getElementById("modal-midiaEletronica");
@@ -41,7 +41,7 @@ function teste(obj) {
 }
 
 function fechaME() {
-    debugger;
+
     document.getElementById('modal-midiaEletronica').style.display = 'none';
     var boxModal = document.querySelector(".box-destq-conteudo");
     var textoModal = document.querySelector(".desc-video-modal");
