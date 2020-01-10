@@ -64,7 +64,11 @@ get_header();
 $title = get_the_title($post->ID, '', '', false);
  $content= get_the_content($post->ID, '', '', false);
   $categories = get_the_category($post->ID, '', '', false); 
+  $listCat = get_the_category_list($separador=',' , '', '', false );
+//var_dump($categories);
+$categoriesId = $categories[1]->cat_ID;
 ?>
+
 <div class="main-banner-interna">
 <img src="<?php echo the_field('imagem_modal'); ?>" alt="" class="img-main-banner">
    
@@ -73,30 +77,30 @@ $title = get_the_title($post->ID, '', '', false);
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/play-btn.png" alt="" class="btn-play-mainbanner image-2" data-ix="abrir-modal-video-reel-full">
         <h1 class="h1-internna"><?php echo $title ?></h1>
         <p><?php echo $content ?></p>
+        <p> <?php echo $listCat ?></p>
+        <p><?php echo $categories[1]->cat_ID ?> <p>
       </div>
     </div>
   </div>
+  
   <?php
   $args = array(
-                'numberposts' => -1,
-                //'posts_per_page' => 1,
-                'category' => $categories,
-                //'orderby' => 'date',
-                //'order' => 'DESC',
-                'include' => array(),
-                'exclude' => array(),
-                //'tag' => $getCliente,
-                'meta_key' => '',
-                'meta_value' => '',
-                'post_type' => 'post',
-                'suppress_filters' => true,
-
-                'offset' => 1
-            );
+                  //'posts_per_page' => "3",
+                  'category' =>$post->ID,
+                  'orderby' => 'desc',
+                  'order' => 'DES',
+                  'include' => array(),
+                  'exclude' => $post->ID, //não apresentando o atual 
+                  'meta_key' => '',
+                  'meta_value' => '',
+                  'post_type' => 'post',
+                  'suppress_filters' => true,
+                  'offset' => -1
+              );
 ?>
 
   <div id="midia-eletronica" class="section-veja-interna">
-    <h2 class="h2-interna">veja também - <?php var_dump($categories) ?> </h2>
+    <h2 class="h2-interna">veja também </h2>
     <ul class="ul-veja-tambem interna w-clearfix w-list-unstyled">
 
                 <?php $my_query= null;
