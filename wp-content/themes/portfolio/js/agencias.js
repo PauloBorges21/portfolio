@@ -68,3 +68,7 @@ function fechaME() {
     slideIndex = 1;
 }
 
+function boxVejaMais()
+{
+
+}

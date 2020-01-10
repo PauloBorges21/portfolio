@@ -3,35 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2a4be743-16cb-49b1-82e5-6aa110090419" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/css/ajustes.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/css/ajustes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/css/portfolio-rai-2019.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/css/portfolio-rai-2019.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/inc/modalSlider.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/inc/modalSlider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/ANI/filmes.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/ANI/filmes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/ANI/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/ANI/portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Awaken/apresentacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Awaken/apresentacao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Awaken/cases.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Awaken/cases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/apresentacao-influenciadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/apresentacao-influenciadores.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/apresentacao-pr.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/apresentacao-pr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/cases-influenciadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/cases-influenciadores.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/cases-pr.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/cases-pr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/quem-somos.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/quem-somos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/NES/cases.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/NES/cases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/apps.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/apps.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/ecommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/ecommerce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/mot.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/mot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/private.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/private.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2017.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2017.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2018.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2018.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2019.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/case2019.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/design.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/design.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/digital.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/digital.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronica.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronica.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-impressa.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-impressa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/page-or.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/page-or.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/inc/menu-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/inc/menu-pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/page-clientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/page-clientes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/page-rai.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/page-rai.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,95 +19,54 @@
       <executable />
     </execution>
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="255">
-                    <caret line="189" column="37" selection-start-line="189" selection-start-column="37" selection-end-line="189" selection-end-column="37" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/apps.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="472">
-                    <caret line="249" column="56" lean-forward="true" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/mot.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="238">
-                    <caret line="200" column="121" lean-forward="true" selection-start-line="200" selection-end-line="200" selection-end-column="121" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-or.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="342">
-                    <caret line="86" column="77" lean-forward="true" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-clientes.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="85">
-                    <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-rai.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="323">
+              <caret line="105" column="82" lean-forward="true" selection-start-line="105" selection-start-column="82" selection-end-line="105" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="173" selection-start-line="173" selection-end-line="173" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/inc/menu-pages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/inc/equipe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronica.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-menus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -142,25 +75,21 @@
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/private.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" selection-end-line="249" />
+              <caret selection-end-line="249" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/css/ajustes.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -168,17 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
+            <state relative-caret-position="1088">
               <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/ecommerce.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2216">
-              <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
             </state>
           </provider>
         </entry>
@@ -232,9 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-ani.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/reel.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-dezoito.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Dezoito/post-destaque.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-awaken.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Awaken/post-destaque.php" />
@@ -281,6 +198,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/portfolio/inc/menu-pages.php" />
+        <option value="$USER_HOME$/Downloads/portfolio-rai-2019.webflow (6)/clientes.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-clientes.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/portfolio/page-rai.php" />
       </list>
@@ -298,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,19 +250,26 @@
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../abbottfinalv2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -376,18 +304,18 @@
       <workItem from="1574684062630" duration="75036000" />
       <workItem from="1574949381399" duration="64604000" />
       <workItem from="1575324959479" duration="86839000" />
-      <workItem from="1575593311122" duration="28104000" />
+      <workItem from="1575593311122" duration="28472000" />
+      <workItem from="1575896673276" duration="7472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392444000" />
+    <option name="totallyTimeSpent" value="400284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2205438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22356495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -400,7 +328,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.04901961" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.060457516" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -436,25 +364,6 @@
     <wordpressPath>C:\wamp64\www\portfolio</wordpressPath>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/portfolio-rai-2019.webflow (4)/rai-advertising.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="749" column="10" selection-start-line="749" selection-start-column="10" selection-end-line="749" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa - Copia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2591" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronicav1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/js/agencias.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -464,13 +373,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/functions.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="110" column="34" lean-forward="true" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/header.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -681,66 +583,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/apps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="249" column="56" lean-forward="true" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/private.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="249" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-or.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="86" column="77" lean-forward="true" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/mot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="200" column="121" lean-forward="true" selection-start-line="200" selection-end-line="200" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/ecommerce.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2216">
           <caret line="249" lean-forward="true" selection-start-line="249" selection-end-line="249" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="189" column="37" selection-start-line="189" selection-start-column="37" selection-end-line="189" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -751,38 +597,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="78" column="52" lean-forward="true" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronica.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/private.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="249" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/rom.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/css/ajustes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/post-destaque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/js/imprensa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="189" column="37" selection-start-line="189" selection-start-column="37" selection-end-line="189" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/apps.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="249" column="56" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Or/mot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="121" selection-start-line="200" selection-end-line="200" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/inc/equipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/inc/menu-pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/portfolio-rai-2019.webflow (6)/clientes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="249" column="105" lean-forward="true" selection-start-line="242" selection-start-column="2" selection-end-line="249" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-imprensa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="173" selection-start-line="173" selection-end-line="173" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-or.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-clientes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="221">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-rai.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/includes/Rai/midia-eletronica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/portfolio/page-menus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="323">
+          <caret line="105" column="82" lean-forward="true" selection-start-line="105" selection-start-column="82" selection-end-line="105" selection-end-column="82" />
         </state>
       </provider>
     </entry>
