@@ -127,7 +127,9 @@
 
 
     <div id="w-node-dd0551e9809f-ae858d38" data-w-id="92021801-75e7-e58b-51ef-dd0551e9809f" class="link-home" data-ix="hover-home">
+    
         <div class="txt-link-home">Como pensamos</div>
+        <a href="<?php echo get_site_url() ?>/como-pensamos">
         <div data-delay="11000" data-animation="cross" data-autoplay="1" data-disable-swipe="1" data-duration="3000" data-infinite="1" class="slider-home w-slider">
             <div class="mask-slider-home w-slider-mask">
                 <?php if (have_rows('imagem_card_como_pensamos')): while (have_rows('imagem_card_como_pensamos')) : the_row(); ?>
@@ -135,7 +137,7 @@
                     <div class="w-clearfix w-slide">
                         <img src="<?php the_sub_field('imagens_como_pensamos'); ?>" alt="" class="img-slider-home equipe">
                     </div>
-
+                    </a>
                 <?php endwhile; else : endif; ?>
             </div>
             <div class="arrow-slider-home w-slider-arrow-left">
@@ -195,7 +197,7 @@
     </div>
 
 
-    <div id="w-node-27b06bfb4b91-ae858d38" data-w-id="eec2ee2b-3f16-8b36-cf9d-27b06bfb4b91" class="link-home" data-ix="abrir-modal-ranking">
+    <div id="w-node-27b06bfb4b91-ae858d38" data-w-id="eec2ee2b-3f16-8b36-cf9d-27b06bfb4b91" class="link-home" data-ix="abrir-modal-ranking" data-ix="hover-home">
         <div class="txt-link-home">Ranking</div>
         <div data-delay="13000" data-animation="cross" data-autoplay="1" data-disable-swipe="1" data-duration="4500" data-infinite="1" class="slider-home w-slider">
             <div class="mask-slider-home w-slider-mask">
@@ -272,4 +274,6 @@
 </div>
 
 <!--##################  FINAL Container Apresentação  #################################-->
+
+
 <?php get_footer(); ?>

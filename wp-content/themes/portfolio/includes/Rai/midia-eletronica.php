@@ -1,9 +1,7 @@
-
-  
 <div id="midia-eletronica" class="section-sliders">
-	    <h2 class="h2-interna">Mídia Eletrônica</h2>
-	     <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
-		    <div class="mask-sllider-interna w-slider-mask">
+    <h2 class="h2-interna">Mídia Eletrônica</h2>
+    <div data-animation="slide" data-duration="500" data-infinite="1" class="sllider-interna w-slider">
+        <div class="mask-sllider-interna w-slider-mask">
 
             <?php if (have_rows('apresentaCards', 102)) { //Se existir banner
 
@@ -13,21 +11,25 @@
             $getCliente = get_sub_field('nome_do_cliente');
             $getLogo = get_sub_field('logo', 102);
             $getCliente = preg_replace('/[ -]+/', '-', $getCliente);
+            $str = strtolower($getCliente);
             $exibe = get_sub_field('midia_eletronica');
+            
 
 
             $args = array(
+                'category_name' => $str,
+                'post_type' => array('midia_eletronica'),
                 'numberposts' => 1,
                 //'posts_per_page' => 1,
-                'category' => array(16),
-                //'orderby' => 'date',
-                //'order' => 'DESC',
+                'orderby' => 'date',
+                'order' => 'DESC',
                 'include' => array(),
                 'exclude' => array(),
-                'tag' => $getCliente,
-                'meta_key' => '',
-                'meta_value' => '',
-                'post_type' => 'post',
+                // 'taxonomies' => array($getCliente),
+                 'tag'=> array('rai',$str) ,
+                //'meta_key' => $getCliente,
+               // 'meta_value' => $getCliente,
+                //'post_type' => 'clientes',
                 'suppress_filters' => true,
 
                 //'offset' => 1
@@ -41,7 +43,7 @@
                 ?>
 
 
-                <?php $my_query = new Wp_Query($args);
+            <?php $my_query = new Wp_Query($args);
 
                 $my_posts = get_posts($args);
                 $post_categories = get_terms($args);
@@ -61,42 +63,33 @@
                     ?>
 
 
-<div class="item-sllider-interna w-slide">
+            <div class="item-sllider-interna w-slide">
 
 
-	<a href="<?php the_permalink(); ?>" class="content-slide w-inline-block">
-    <img src="<?php echo the_field('thumb_card_video') ?>" alt="" class="img-slide-conteudos">
-			<div class="logo-cliente-slide">
-            <img src="<?php echo $getLogo; ?>" alt="" class="logo-slide">
-				</div>
-            </a>
-            
-            
+                <a href="<?php the_permalink() ?>" class="content-slide w-inline-block">
+                    <img src="<?php echo the_field('thumb_card_video') ?>" alt="" class="img-slide-conteudos">
+                    <div class="logo-cliente-slide">
+                        <img src="<?php echo $getLogo; ?>" alt="" class="logo-slide">
 
-		
-
-
-
-<?php endforeach;?>
-
+                    </div>
+                </a>
             </div>
+                <?php endforeach;?>
 
-<?php
+                <?php
 
 } //Fim Se selecionado para exibir
     else {
 ?>
-
-
-
-<?php
+                <?php
     } //Fim else
         }
             }
 
 //fim do loop de posts
 ?>
-   
+            </div>
+
             <div class="arrow-sllider-interna left w-slider-arrow-left">
                 <div class="w-icon-slider-left"></div>
             </div>
@@ -106,14 +99,8 @@
             </div>
 
             <div class="nav-sllider-interna w-slider-nav w-round"></div>
-                </div>
-            </div>
 
-     
-
-
-
-
-            </div>
+        
     </div>
 </div>
+

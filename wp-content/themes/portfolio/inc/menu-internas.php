@@ -4,7 +4,7 @@
     </a>
     <ul class="ul-navmenu w-clearfix w-list-unstyled">
         <li class="li-navmenu">
-            <a href="#" class="link-navmenu">Como pensamos</a>
+            <a href="<?php echo get_site_url() ?>/como-pensamos" class="link-navmenu">Como pensamos</a>
         </li>
         <li class="li-navmenu">
             <a href="#" class="link-navmenu" data-ix="abrir-modal-premios">Prêmios</a>

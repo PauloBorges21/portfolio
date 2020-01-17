@@ -68,30 +68,30 @@ get_header();
 
 
 
-    <div class="nav-interna w-clearfix">
+ 
+
+                    <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#cases" class="link-nav-interna">Cases</a>
+            <a href="#filmes" class="link-nav-interna">Cases</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#apresentacao" class="link-nav-interna">Apresentação</a>
+            <a href="#portfolio" class="link-nav-interna">Apresentação</a>
             </li>
-<!---->
-<!--            <li class="li-nav-interna w-clearfix">-->
-<!--                <a href="#" class="link-nav-interna">Mídia Impressa</a>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="li-nav-interna w-clearfix">-->
-<!--                <a href="#digital" class="link-nav-interna">Digital</a>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="li-nav-interna w-clearfix">-->
-<!--                <a href="#" class="link-nav-interna">Design &amp; VM</a>-->
-<!--            </li>-->
+
+           
         </ul>
-        <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
+        <form action="<?php echo get_site_url(); ?>/page-clientes" method="GET">
+            <?php $urlPagina = 110; ?>
+
+
+            <input hidden="" name="getUrl" value="<?= $urlPagina ?>">
+            <input class="link-nav-interna btncliente" type="submit" value="Cliente">
+
+        </form>
     </div>
+
 
 
                     <?php include(TEMPLATEPATH . '/includes/Awaken/cases.php'); ?>

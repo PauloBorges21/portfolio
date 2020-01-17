@@ -1,6 +1,8 @@
 <?php
-//Template Name: OR
+//Template Name: Or
+
 get_header();
+
 ?>
     <style>
         .box-modal.equipe {
@@ -49,181 +51,69 @@ get_header();
     </style>
     </head>
 
+
     <body class="body-interna">
 
-    <?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
+<?php include(TEMPLATEPATH . '/inc/expertise.php'); ?>
 
-    <?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
+<?php include(TEMPLATEPATH . '/inc/premios.php'); ?>
 
-    <?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
+<?php include(TEMPLATEPATH . '/inc/equipe.php'); ?>
 
-    <?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
+<?php include(TEMPLATEPATH . '/inc/menu-pages.php'); ?>
 
-    <?php include(TEMPLATEPATH . '/includes/Or/post-destaque.php'); ?>
+<?php include(TEMPLATEPATH . '/includes/Or/post-destaque.php'); ?>  <!-- Destaque da página -->
 
-
-
-
+<!-- Inicio do menu  -->
 
     <div class="nav-interna w-clearfix">
         <ul class="ul-nav-interna w-clearfix w-list-unstyled">
             <li class="li-nav-interna w-clearfix">
-                <a href="#apps" class="link-nav-interna">APPs</a>
+                <a href="#apps" class="link-nav-interna">Apps</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#mot" class="link-nav-interna">MOT</a>
+                <a href="#sistemas" class="link-nav-interna">Sistemas</a>
             </li>
 
             <li class="li-nav-interna w-clearfix">
-                <a href="#rom" class="link-nav-interna">ROM</a>
+                <a href="#sites" class="link-nav-interna">Sites & E-COMMERCE</a>
             </li>
 
-            <li class="li-nav-interna w-clearfix">
-                <a href="#private" class="link-nav-interna">PRIVATE LABEL</a>
-            </li>
-
-            <li class="li-nav-interna w-clearfix">
-                <a href="#e-commerce" class="link-nav-interna">E-COMMERCE</a>
-            </li>
         </ul>
+        <form action="<?php echo get_site_url(); ?>/page-clientes" method="GET">
+            <?php $urlPagina = 116; ?>
 
-        <a href="#" class="link-nav-interna" data-ix="abrir-modal-clientes">clientes</a>
 
+            <input hidden="" name="getUrl" value="<?= $urlPagina ?>">
+            <input class="link-nav-interna btncliente" type="submit" value="Cliente">
+
+        </form>
     </div>
 
+    <!-- Final do menu  -->
+
+<!-- Inicio do Conteudo dos cards -->
+
+<?php include(TEMPLATEPATH . '/includes/Or/apps.php'); ?>
+
+<?php include(TEMPLATEPATH . '/includes/Or/sistemas.php'); ?>
+
+<?php include(TEMPLATEPATH . '/includes/Or/ecommerce.php'); ?>
 
 
 
 
-    <?php include(TEMPLATEPATH . '/includes/Or/apps.php'); ?>
-
-    <?php include(TEMPLATEPATH . '/includes/Or/mot.php'); ?>
-
-    <?php include(TEMPLATEPATH . '/includes/Or/rom.php'); ?>
-
-    <?php include(TEMPLATEPATH . '/includes/Or/private.php'); ?>
-
-    <?php include(TEMPLATEPATH . '/includes/Or/ecommerce.php'); ?>
-
-
-    <div class="modal-conteudo-interna">
-        <div class="box-content-modal">
-            <div class="container-video-modal">
-                <!--
-      #################################
-      #MODAL POPUP Puxa Imagem Título e Conteúdo
-      #################################
-      -->
-
-
-                <?php
-
-                //argumentos do loop de posts da categoria. Trazendo o ultimo projeto da Agencia
-                $args = array(
-                    'numberposts' => 1,
-                    'category' => array(28),
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'include' => array(),
-                    'exclude' => array(),
-                    'meta_key' => '',
-                    'meta_value' => '',
-                    'post_type' => 'post',
-                    'suppress_filters' => true,
-
-                    //'offset' => 1
-                );
-                $my_posts = get_posts($args);
-                $post_categories = get_terms($args);
-                //inicio do loop de posts
-                //var_dump($post_categories);
-                if ($my_posts) : foreach ($my_posts
-
-                as $post) :
-                setup_postdata($post);
-
-                $title = get_the_title($post->ID, '', '', false);
-                $content = get_the_content($post->ID, '', '', false);
-                $cat_nome = get_the_category($post->ID);
-                //$verificaCategoria = $cat_nome[1]->slug;
-                //var_dump($my_posts);
-
-                ?>
-
-
-                <div class="box-destq-conteudo" data-ix="abrir-modal-video-full">
-                    <img src="<?php echo the_field('imagem_modal') ?>" alt="" class="img-destq-conteudo">
-                </div>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-fechar.png" alt=""
-                     class="btn-fechar-modal-conteudo" data-ix="fechar-modal-conteudo-interna">
-            </div>
-            <div class="desc-video-modal">
-                <h2 class="h2-conteudo"><?= $title ?></h2>
-                <div><?= $content ?> </div>
-            </div>
-
-            <?php endforeach;
-            endif; ?>
-
-
-    <div class="container-modal-clientes">
-        <img src="<?php echo get_stylesheet_directory_uri()?>/images/btn-fechar-modal.png" id="fecha-modal" alt="" class="btn-fechar-modal" data-ix="fechar-modal-clientes">
-        <div class="box-modal clientes">
-            <h2 class="h2-modal">G l o b a i s</h2>
-            <ul class="ul-clientes w-clearfix w-list-unstyled">
-
-                <?php if(have_rows('logos_clientes_globais',102)): while(have_rows('logos_clientes_globais',102)) : the_row(); ?>
-
-                    <li class="li-clientes" data-ix="abrir-modal-cont-interna">
-                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
-                    </li>
-
-                <?php endwhile; else : endif; ?>
-
-            </ul>
-
-            <h2 class="h2-modal">L o c a i s</h2>
-            <ul class="ul-clientes w-clearfix w-list-unstyled">
-
-                <?php if(have_rows('logos_clientes_locais',102)): while(have_rows('logos_clientes_locais',102)) : the_row(); ?>
-
-                    <li class="li-clientes" data-ix="abrir-modal-cont-interna">
-                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
-                    </li>
-
-                <?php endwhile; else : endif; ?>
-
-
-            </ul>
-
-            <h2 class="h2-modal">principais clientes atendidos</h2>
-            <ul class="ul-clientes w-clearfix w-list-unstyled">
-
-                <?php if(have_rows('logos_principais_clientes_atendidos',102)): while(have_rows('logos_principais_clientes_atendidos',102)) : the_row();
-
-                    $pega_data = get_sub_field('data_de_entrada_na_casa');
-                    $data_sistema = date('Y-m-d');
-                    $pega_data_Time = new DateTime($pega_data);
-                    $data_sistema_Time = new DateTime($data_sistema);
-                    $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
-
-                    ?>
-
-                    <li class="li-clientes principais" data-ix="abrir-modal-cont-interna">
-                        <img src="<?php the_sub_field('imagem_logo',102);?>" alt="">
-                        <div><?php echo $pega_diferenca->y ?> x anos</div>
-                    </li>
-                <?php endwhile; else : endif; ?>
-
-
-
-            </ul>
+<div class="section-footer">
+        <div class="container-footer w-container"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-rai-branco.png" alt=""
+                    class="img-footer">
+            <div>copyright © 2019 grupo rái - todos os direitos reservados.</div>
         </div>
     </div>
 
 
 
-<?php include(TEMPLATEPATH . '/inc/modalSlider.php'); ?>
+
 
 <?php get_footer(); ?>

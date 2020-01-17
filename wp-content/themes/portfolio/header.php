@@ -7,8 +7,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/components.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/portfolio-rai-2019.css" rel="stylesheet"
-          type="text/css">
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/portfolio-rai-2019.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/ajustes.css" rel="stylesheet" type="text/css">
 
 

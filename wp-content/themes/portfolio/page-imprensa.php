@@ -161,6 +161,7 @@ get_header();
             </div>
         </div>
     </div>
+    
     <div class="section-footer">
         <div class="container-footer w-container"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-rai-branco.png" alt=""

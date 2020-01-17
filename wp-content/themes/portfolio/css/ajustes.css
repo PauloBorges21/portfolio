@@ -3,3 +3,9 @@
 /* padding: 35px !important;*/
 
 /*}*/
+.btncliente {
+
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+  }
